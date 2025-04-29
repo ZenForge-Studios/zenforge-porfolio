@@ -1,0 +1,235 @@
+---
+import Navbar from '../components/Navbar.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8">
+    <title>ZenForge Studios - Proyectos</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" />
+  </head>
+  <body class="bg-gray-900 text-white font-poppins">
+    <Navbar />
+
+    <!-- Lista de Proyectos -->
+    <main class="container mx-auto px-4 py-12">
+      <h1 class="text-4xl font-bold text-center mb-8 text-blue-400">Nuestros Proyectos</h1>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+        <!-- Proyecto 1 -->
+        <div class="bg-gray-800 p-6 rounded-lg shadow-lg hover:bg-gray-700 transition">
+          <img
+            src="/public/bannermiby1.png"
+            alt="LegendX Network | Servidor"
+            class="rounded-lg mb-4"
+          />
+          <h3 class="text-xl font-bold text-blue-400">LegendX Network | Servidor</h3>
+          <p class="text-gray-300 mt-3">
+            Network de Minecraft dirigido a todo público. La modalidad principal, "Legendary Skyblock", está diseñada en base a un estilo RPG, replicando de manera casi exacta algunas de las funciones "Hypixel Skyblock".
+          </p>
+          <a
+            href="https://discord.gg/C4jRQJyWfZ"
+            class="block mt-4 text-center bg-blue-500 text-white font-bold px-6 py-3 rounded-lg shadow hover:bg-blue-600 transition"
+            target="_blank"
+          >
+            Discord de LegendX
+          </a>
+        </div>
+
+        <!-- Proyecto 2 -->
+        <div class="bg-gray-800 p-6 rounded-lg shadow-lg hover:bg-gray-700 transition">
+          <img
+            src="/public/bannermiby1.png"
+            alt="Miby | Discord Bot"
+            class="rounded-lg mb-4"
+          />
+          <h3 class="text-xl font-bold text-blue-400">Miby | Discord Bot</h3>
+          <p class="text-gray-300 mt-3">
+            Bot de Discord multipropósito hecho para comunidades. Incluye dinámicas, sistemas propios para ambientar tu servidor y características avanzadas.
+          </p>
+          <a
+            href="https://discord.com/oauth2/authorize?client_id=BOT_ID&scope=bot"
+            class="block mt-4 text-center bg-blue-500 text-white font-bold px-6 py-3 rounded-lg shadow hover:bg-blue-600 transition"
+            target="_blank"
+          >
+            Invitar Bot
+          </a>
+        </div>
+
+        <!-- Proyecto 3 -->
+        <div class="bg-gray-800 p-6 rounded-lg shadow-lg hover:bg-gray-700 transition">
+            <img
+              src="/public/ecojobs.png"
+              alt="ZFS EcoJobs | Config"
+              class="rounded-lg mb-4"
+            />
+            <h3 class="text-xl font-bold text-blue-400">ZFS EcoJobs | Config</h3>
+            <p class="text-gray-300 mt-3">
+              La configuración de Trabajos ofrece varias funciones con un toque mucho mejor que el que proporciona el complemento de fábrica.
+            </p>
+            <a
+              href="https://builtbybit.com/resources/zfs-ecojobs-config.60361/"
+              class="block mt-4 text-center bg-blue-500 text-white font-bold px-6 py-3 rounded-lg shadow hover:bg-blue-600 transition"
+              target="_blank"
+            >
+              Ver Producto
+            </a>
+          </div>
+          
+          <!-- Proyecto 4 -->
+          <div class="bg-gray-800 p-6 rounded-lg shadow-lg hover:bg-gray-700 transition">
+            <img
+              src="/public/ecopets.png"
+              alt="EcoPets Addon | Plugin"
+              class="rounded-lg mb-4"
+            />
+            <h3 class="text-xl font-bold text-blue-400">EcoPets Addon | Plugin</h3>
+            <p class="text-gray-300 mt-3">
+              Configuración avanzada de EcoJobs con funciones mejoradas y únicas en comparación al complemento por defecto.
+            </p>
+            <a
+              href="https://marketplace.com/zfs-ecojobs-config"
+              class="block mt-4 text-center bg-blue-500 text-white font-bold px-6 py-3 rounded-lg shadow hover:bg-blue-600 transition"
+              target="_blank"
+            >
+              Ver Producto
+            </a>
+          </div>
+          
+          <!-- Proyecto 5 -->
+          <div class="bg-gray-800 p-6 rounded-lg shadow-lg hover:bg-gray-700 transition">
+            <img
+              src="/public/tabscore.png"
+              alt="Tab & Score | Config"
+              class="rounded-lg mb-4"
+            />
+            <h3 class="text-xl font-bold text-blue-400">Tab & Score | Config</h3>
+            <p class="text-gray-300 mt-3">
+              ZFS Tab and Score Config ofrece una configuración completa para tabuladores y scoreboards, optimizada para personalización y funcionalidad
+            </p>
+            <a
+              href="https://builtbybit.com/resources/zfs-tab-and-score-config.25937/"
+              class="block mt-4 text-center bg-blue-500 text-white font-bold px-6 py-3 rounded-lg shadow hover:bg-blue-600 transition"
+              target="_blank"
+            >
+              Ver Producto
+            </a>
+          </div>
+          
+          <!-- Proyecto 6 -->
+          <div class="bg-gray-800 p-6 rounded-lg shadow-lg hover:bg-gray-700 transition">
+            <img
+              src="/public/bungee.png"
+              alt="ZFS Bungee | Setup"
+              class="rounded-lg mb-4"
+            />
+            <h3 class="text-xl font-bold text-blue-400">ZFS Bungee | Setup</h3>
+            <p class="text-gray-300 mt-3">
+              ZFS Bungee Setup ofrece configuración avanzada para servidores Minecraft, garantizando estabilidad, personalización y rendimiento óptimo para redes multijugador.
+            </p>
+            <a
+              href="https://builtbybit.com/resources/zfs-bungee-setup.47133/"
+              class="block mt-4 text-center bg-blue-500 text-white font-bold px-6 py-3 rounded-lg shadow hover:bg-blue-600 transition"
+              target="_blank"
+            >
+              Ver Producto
+            </a>
+          </div>
+      </div>
+
+      <!-- Reseñas dinámicas -->
+      <section>
+        <h2 class="text-3xl font-bold text-gray-300 text-center mb-6">Lo que dicen nuestros clientes</h2>
+        <div class="overflow-hidden relative">
+          <div id="review-slider" class="flex transition-transform duration-700 ease-in-out">
+            <!-- Grupo 1: Reseñas -->
+            <div class="flex space-x-6 min-w-full">
+              <div class="bg-gray-800 rounded-lg shadow-lg flex-1 overflow-hidden">
+                <img
+                  src="/path/to/banner1.jpg"
+                  alt="Banner Cliente 1"
+                  class="w-full h-40 object-cover"
+                />
+                <div class="p-6">
+                  <p class="text-gray-300">"Excelente servicio, siempre están atentos."</p>
+                  <span class="block text-blue-400 mt-4 font-bold text-center">Cliente 1</span>
+                </div>
+              </div>
+              <div class="bg-gray-800 rounded-lg shadow-lg flex-1 overflow-hidden">
+                <img
+                  src="/public/en.png"
+                  alt="Banner Cliente 2"
+                  class="w-full h-40 object-cover"
+                />
+                <div class="p-6">
+                  <p class="text-gray-300">"Nunca he tenido problemas, ¡muy recomendados!"</p>
+                  <span class="block text-blue-400 mt-4 font-bold text-center">Cliente 2</span>
+                </div>
+              </div>
+              <div class="bg-gray-800 rounded-lg shadow-lg flex-1 overflow-hidden">
+                <img
+                  src="/path/to/banner3.jpg"
+                  alt="Banner Cliente 3"
+                  class="w-full h-40 object-cover"
+                />
+                <div class="p-6">
+                  <p class="text-gray-300">"Los mejores precios en el mercado."</p>
+                  <span class="block text-blue-400 mt-4 font-bold text-center">Cliente 3</span>
+                </div>
+              </div>
+            </div>
+      
+            <!-- Grupo 2: Reseñas -->
+            <div class="flex space-x-6 min-w-full">
+              <div class="bg-gray-800 rounded-lg shadow-lg flex-1 overflow-hidden">
+                <img
+                  src="/path/to/banner4.jpg"
+                  alt="Banner Cliente 4"
+                  class="w-full h-40 object-cover"
+                />
+                <div class="p-6">
+                  <p class="text-gray-300">"Excelente solución, han mejorado mis proyectos."</p>
+                  <span class="block text-blue-400 mt-4 font-bold text-center">Cliente 4</span>
+                </div>
+              </div>
+              <div class="bg-gray-800 rounded-lg shadow-lg flex-1 overflow-hidden">
+                <img
+                  src="/path/to/banner5.jpg"
+                  alt="Banner Cliente 5"
+                  class="w-full h-40 object-cover"
+                />
+                <div class="p-6">
+                  <p class="text-gray-300">"Soporte técnico 24/7, no hay mejor servicio."</p>
+                  <span class="block text-blue-400 mt-4 font-bold text-center">Cliente 5</span>
+                </div>
+              </div>
+              <div class="bg-gray-800 rounded-lg shadow-lg flex-1 overflow-hidden">
+                <img
+                  src="/public/en.png"
+                  alt="Banner Cliente 6"
+                  class="w-full h-40 object-cover"
+                />
+                <div class="p-6">
+                  <p class="text-gray-300">"Cumplen lo que prometen, muy confiables."</p>
+                  <span class="block text-blue-400 mt-4 font-bold text-center">Cliente 6</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+      <script>
+        let currentIndex = 0;
+        const slider = document.getElementById("review-slider");
+        const groups = slider.children;
+      
+        setInterval(() => {
+          currentIndex = (currentIndex + 1) % groups.length;
+          slider.style.transform = `translateX(-${currentIndex * 100}%)`;
+        }, 5000); // Cambia cada 5 segundos
+      </script>
+  </body>
+</html>

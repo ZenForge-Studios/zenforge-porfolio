@@ -1,0 +1,36 @@
+---
+import Navbar from '../components/Navbar.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8">
+    <title>ZenForge Studios - Cotizar</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" />
+  </head>
+  <body class="bg-gray-900 text-white font-poppins">
+    <Navbar />
+
+    <!-- Sección de Cotizar -->
+    <main class="container mx-auto px-4 py-12">
+      <h1 class="text-4xl font-bold text-center mb-8 text-blue-400">Cotiza con Nosotros</h1>
+      <p class="text-lg text-center text-gray-300 mb-6">
+        Estamos listos para ayudarte a llevar tu proyecto al siguiente nivel. Haz clic en el botón de abajo para unirte a nuestro servidor de Discord y solicitar tu cotización.
+      </p>
+      <div class="text-center">
+        <a
+          href="https://discord.gg/your-discord-invite"
+          class="inline-block px-8 py-3 bg-blue-500 text-white font-bold text-lg rounded-lg shadow-lg hover:bg-blue-600 transition"
+          target="_blank"
+        >
+          Solicitar Cotización en Discord
+        </a>
+      </div>
+    </main>
+
+    <Footer />
+  </body>
+</html>

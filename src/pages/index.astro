@@ -1,0 +1,36 @@
+---
+import Navbar from '../components/Navbar.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8">
+    <title>ZenForge Studios - Inicio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" />
+  </head>
+  <body class="bg-gray-900 text-white font-poppins">
+    <Navbar />
+
+    <!-- Hero Section -->
+    <main class="min-h-screen flex flex-col justify-center items-center bg-gray-800">
+      <h1 class="text-6xl font-bold text-blue-400 mb-6 animate-fadeIn">Bienvenidos a ZenForge Studios</h1>
+      <p class="text-xl text-gray-300 mb-8 max-w-3xl text-center">
+        Somos tu aliado en soluciones digitales de alto rendimiento. Descubre nuestros servicios de hosting,
+        diseño gráfico y desarrollo personalizado.
+      </p>
+      <div class="flex space-x-6">
+        <a href="/portfolio" class="px-8 py-3 bg-blue-500 text-white font-bold rounded-lg shadow-lg hover:bg-blue-600 transition">
+          Ver Portafolio
+        </a>
+        <a href="/servicios" class="px-8 py-3 bg-gray-700 text-white font-bold rounded-lg shadow-lg hover:bg-gray-800 transition">
+          Nuestros Servicios
+        </a>
+      </div>
+    </main>
+
+    <Footer />
+  </body>
+</html>
