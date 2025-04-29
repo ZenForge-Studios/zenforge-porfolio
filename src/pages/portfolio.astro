@@ -143,98 +143,140 @@ import Footer from '../components/Footer.astro';
       <!-- Reseñas dinámicas -->
       <section>
         <h2 class="text-3xl font-bold text-gray-300 text-center mb-6">Lo que dicen nuestros clientes</h2>
-        <div class="overflow-hidden relative">
+        <div class="relative">
           <div id="review-slider" class="flex transition-transform duration-700 ease-in-out">
             <!-- Grupo 1: Reseñas -->
             <div class="flex space-x-6 min-w-full">
-              <div class="bg-gray-800 rounded-lg shadow-lg flex-1 overflow-hidden">
+              <!-- Tarjeta de reseña -->
+              <div class="bg-gray-800 rounded-lg shadow-lg flex items-center p-6">
+                <!-- Imagen de perfil -->
                 <img
-                  src="/Dacizco.jpg"
-                  alt="Dacizco"
-                  class="w-full h-40 object-cover"
+                  src="/Kryz.png"
+                  alt="Alex Rivera"
+                  class="w-16 h-16 rounded-full mr-4"
                 />
-                <div class="p-6">
-                  <p class="text-gray-300">"Buen servicio que hace cuacxdpe su studio zenforge es de calidad."</p>
-                  <span class="block text-blue-400 mt-4 font-bold text-center">Discord Addon</span>
+                <!-- Contenido de la reseña -->
+                <div class="flex flex-col flex-1">
+                  <div class="flex items-center justify-between mb-2">
+                    <h3 class="text-lg font-bold text-blue-400">Alex Rivera</h3>
+                    <div class="text-yellow-400">★★★★★</div>
+                  </div>
+                  <p class="text-gray-300">"Buen servicio que hace cuacxdpe su studio ZenForge es de calidad."</p>
                 </div>
               </div>
-              <div class="bg-gray-800 rounded-lg shadow-lg flex-1 overflow-hidden">
+      
+              <div class="bg-gray-800 rounded-lg shadow-lg flex items-center p-6">
                 <img
                   src="/Kryz.png"
                   alt="Kryz"
-                  class="w-full h-40 object-cover"
+                  class="w-16 h-16 rounded-full mr-4"
                 />
-                <div class="p-6">
-                  <p class="text-gray-300">"La configuración y decoración de mi servidor de discord fue increíble, fue rápido y se acomodó a mis peticiones de decoración junto con la creación de un logo tal y como quería, un excelente servicio.!"</p>
-                  <span class="block text-blue-400 mt-4 font-bold text-center">Discord Server Config</span>
+                <div class="flex flex-col flex-1">
+                  <div class="flex items-center justify-between mb-2">
+                    <h3 class="text-lg font-bold text-blue-400">Kryz</h3>
+                    <div class="text-yellow-400">★★★★★</div>
+                  </div>
+                  <p class="text-gray-300">"La configuración y decoración de mi servidor de Discord fue increíble."</p>
                 </div>
               </div>
-              <div class="bg-gray-800 rounded-lg shadow-lg flex-1 overflow-hidden">
+      
+              <div class="bg-gray-800 rounded-lg shadow-lg flex items-center p-6">
                 <img
-                  src="/en.png"
-                  alt="Banner Cliente 3"
-                  class="w-full h-40 object-cover"
+                  src="/Kryz.png"
+                  alt="En"
+                  class="w-16 h-16 rounded-full mr-4"
                 />
-                <div class="p-6">
+                <div class="flex flex-col flex-1">
+                  <div class="flex items-center justify-between mb-2">
+                    <h3 class="text-lg font-bold text-blue-400">En</h3>
+                    <div class="text-yellow-400">★★★★☆</div>
+                  </div>
                   <p class="text-gray-300">"Los mejores precios en el mercado."</p>
-                  <span class="block text-blue-400 mt-4 font-bold text-center">Cliente 3</span>
                 </div>
               </div>
             </div>
       
             <!-- Grupo 2: Reseñas -->
-            <div class="flex space-x-6 min-w-full">
-              <div class="bg-gray-800 rounded-lg shadow-lg flex-1 overflow-hidden">
+            <div class="flex space-x-6 min-w-full hidden">
+              <div class="bg-gray-800 rounded-lg shadow-lg flex items-center p-6">
                 <img
-                  src="/en.png"
-                  alt="Banner Cliente 4"
-                  class="w-full h-40 object-cover"
+                  src="/Kryz.png"
+                  alt="Cliente 4"
+                  class="w-16 h-16 rounded-full mr-4"
                 />
-                <div class="p-6">
+                <div class="flex flex-col flex-1">
+                  <div class="flex items-center justify-between mb-2">
+                    <h3 class="text-lg font-bold text-blue-400">Cliente 4</h3>
+                    <div class="text-yellow-400">★★★★★</div>
+                  </div>
                   <p class="text-gray-300">"Excelente solución, han mejorado mis proyectos."</p>
-                  <span class="block text-blue-400 mt-4 font-bold text-center">Cliente 4</span>
                 </div>
               </div>
-              <div class="bg-gray-800 rounded-lg shadow-lg flex-1 overflow-hidden">
+      
+              <div class="bg-gray-800 rounded-lg shadow-lg flex items-center p-6">
                 <img
-                  src="/en.png"
-                  alt="Banner Cliente 5"
-                  class="w-full h-40 object-cover"
+                  src="/Kryz.png"
+                  alt="Cliente 5"
+                  class="w-16 h-16 rounded-full mr-4"
                 />
-                <div class="p-6">
+                <div class="flex flex-col flex-1">
+                  <div class="flex items-center justify-between mb-2">
+                    <h3 class="text-lg font-bold text-blue-400">Cliente 5</h3>
+                    <div class="text-yellow-400">★★★★☆</div>
+                  </div>
                   <p class="text-gray-300">"Soporte técnico 24/7, no hay mejor servicio."</p>
-                  <span class="block text-blue-400 mt-4 font-bold text-center">Cliente 5</span>
                 </div>
               </div>
-              <div class="bg-gray-800 rounded-lg shadow-lg flex-1 overflow-hidden">
+      
+              <div class="bg-gray-800 rounded-lg shadow-lg flex items-center p-6">
                 <img
-                  src="/en.png"
-                  alt="Banner Cliente 6"
-                  class="w-full h-40 object-cover"
+                  src="/Kryz.png"
+                  alt="Cliente 6"
+                  class="w-16 h-16 rounded-full mr-4"
                 />
-                <div class="p-6">
+                <div class="flex flex-col flex-1">
+                  <div class="flex items-center justify-between mb-2">
+                    <h3 class="text-lg font-bold text-blue-400">Cliente 6</h3>
+                    <div class="text-yellow-400">★★★★★</div>
+                  </div>
                   <p class="text-gray-300">"Cumplen lo que prometen, muy confiables."</p>
-                  <span class="block text-blue-400 mt-4 font-bold text-center">Cliente 6</span>
                 </div>
               </div>
             </div>
           </div>
+      
+          <!-- Flecha de navegación -->
+          <button
+            id="next-button"
+            class="absolute right-0 top-1/2 transform -translate-y-1/2 bg-blue-500 text-white px-6 py-10 rounded-l hover:bg-blue-600 transition"
+          >
+            →
+          </button>
         </div>
       </section>
       
       <script>
         let currentIndex = 0;
         const slider = document.getElementById("review-slider");
-        
-        if (slider) {
+        const nextButton = document.getElementById("next-button");
+      
+        if (slider && nextButton) {
           const groups = slider.children;
-        
-          setInterval(() => {
+      
+          nextButton.addEventListener("click", () => {
+            // Ocultar todas las reseñas
+            Array.from(groups).forEach((group, index) => {
+              group.style.display = "none";
+            });
+      
+            // Avanzar al siguiente grupo
             currentIndex = (currentIndex + 1) % groups.length;
-            slider.style.transform = `translateX(-${currentIndex * 100}%)`;
-          }, 5000); // Cambia cada 5 segundos
+      
+            // Mostrar el siguiente grupo
+            groups[currentIndex].style.display = "flex";
+          });
         } else {
-          console.error('Element with ID "review-slider" not found.');
+          console.error('Element with ID "review-slider" or "next-button" not found.');
         }
       </script>
   </body>
