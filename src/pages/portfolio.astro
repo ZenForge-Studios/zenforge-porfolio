@@ -22,7 +22,7 @@ import Footer from '../components/Footer.astro';
         <!-- Proyecto 1 -->
         <div class="bg-gray-800 p-6 rounded-lg shadow-lg hover:bg-gray-700 transition">
           <img
-            src="/public/bannermiby1.png"
+            src="/bannermiby1.png"
             alt="LegendX Network | Servidor"
             class="rounded-lg mb-4"
           />
@@ -42,7 +42,7 @@ import Footer from '../components/Footer.astro';
         <!-- Proyecto 2 -->
         <div class="bg-gray-800 p-6 rounded-lg shadow-lg hover:bg-gray-700 transition">
           <img
-            src="/public/bannermiby1.png"
+            src="/bannermiby1.png"
             alt="Miby | Discord Bot"
             class="rounded-lg mb-4"
           />
@@ -62,7 +62,7 @@ import Footer from '../components/Footer.astro';
         <!-- Proyecto 3 -->
         <div class="bg-gray-800 p-6 rounded-lg shadow-lg hover:bg-gray-700 transition">
             <img
-              src="/public/ecojobs.png"
+              src="/ecojobs.png"
               alt="ZFS EcoJobs | Config"
               class="rounded-lg mb-4"
             />
@@ -82,7 +82,7 @@ import Footer from '../components/Footer.astro';
           <!-- Proyecto 4 -->
           <div class="bg-gray-800 p-6 rounded-lg shadow-lg hover:bg-gray-700 transition">
             <img
-              src="/public/ecopets.png"
+              src="/ecopets.png"
               alt="EcoPets Addon | Plugin"
               class="rounded-lg mb-4"
             />
@@ -102,7 +102,7 @@ import Footer from '../components/Footer.astro';
           <!-- Proyecto 5 -->
           <div class="bg-gray-800 p-6 rounded-lg shadow-lg hover:bg-gray-700 transition">
             <img
-              src="/public/tabscore.png"
+              src="/tabscore.png"
               alt="Tab & Score | Config"
               class="rounded-lg mb-4"
             />
@@ -122,7 +122,7 @@ import Footer from '../components/Footer.astro';
           <!-- Proyecto 6 -->
           <div class="bg-gray-800 p-6 rounded-lg shadow-lg hover:bg-gray-700 transition">
             <img
-              src="/public/bungee.png"
+              src="/bungee.png"
               alt="ZFS Bungee | Setup"
               class="rounded-lg mb-4"
             />
@@ -149,7 +149,7 @@ import Footer from '../components/Footer.astro';
             <div class="flex space-x-6 min-w-full">
               <div class="bg-gray-800 rounded-lg shadow-lg flex-1 overflow-hidden">
                 <img
-                  src="/public/Dacizco.jpg"
+                  src="/Dacizco.jpg"
                   alt="Dacizco"
                   class="w-full h-40 object-cover"
                 />
@@ -160,7 +160,7 @@ import Footer from '../components/Footer.astro';
               </div>
               <div class="bg-gray-800 rounded-lg shadow-lg flex-1 overflow-hidden">
                 <img
-                  src="/public/en.png"
+                  src="/en.png"
                   alt="Banner Cliente 2"
                   class="w-full h-40 object-cover"
                 />
@@ -171,7 +171,7 @@ import Footer from '../components/Footer.astro';
               </div>
               <div class="bg-gray-800 rounded-lg shadow-lg flex-1 overflow-hidden">
                 <img
-                  src="/path/to/banner3.jpg"
+                  src="/en.png"
                   alt="Banner Cliente 3"
                   class="w-full h-40 object-cover"
                 />
@@ -186,7 +186,7 @@ import Footer from '../components/Footer.astro';
             <div class="flex space-x-6 min-w-full">
               <div class="bg-gray-800 rounded-lg shadow-lg flex-1 overflow-hidden">
                 <img
-                  src="/path/to/banner4.jpg"
+                  src="/en.png"
                   alt="Banner Cliente 4"
                   class="w-full h-40 object-cover"
                 />
@@ -197,7 +197,7 @@ import Footer from '../components/Footer.astro';
               </div>
               <div class="bg-gray-800 rounded-lg shadow-lg flex-1 overflow-hidden">
                 <img
-                  src="/path/to/banner5.jpg"
+                  src="/en.png"
                   alt="Banner Cliente 5"
                   class="w-full h-40 object-cover"
                 />
@@ -208,7 +208,7 @@ import Footer from '../components/Footer.astro';
               </div>
               <div class="bg-gray-800 rounded-lg shadow-lg flex-1 overflow-hidden">
                 <img
-                  src="/public/en.png"
+                  src="/en.png"
                   alt="Banner Cliente 6"
                   class="w-full h-40 object-cover"
                 />
@@ -225,12 +225,17 @@ import Footer from '../components/Footer.astro';
       <script>
         let currentIndex = 0;
         const slider = document.getElementById("review-slider");
-        const groups = slider.children;
-      
-        setInterval(() => {
-          currentIndex = (currentIndex + 1) % groups.length;
-          slider.style.transform = `translateX(-${currentIndex * 100}%)`;
-        }, 5000); // Cambia cada 5 segundos
+        
+        if (slider) {
+          const groups = slider.children;
+        
+          setInterval(() => {
+            currentIndex = (currentIndex + 1) % groups.length;
+            slider.style.transform = `translateX(-${currentIndex * 100}%)`;
+          }, 5000); // Cambia cada 5 segundos
+        } else {
+          console.error('Element with ID "review-slider" not found.');
+        }
       </script>
   </body>
 </html>

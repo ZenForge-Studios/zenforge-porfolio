@@ -6,12 +6,14 @@
     "dev": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
-    "astro": "astro"
+    "astro": "astro",
+    "inicio": "npm run dev"
   },
   "dependencies": {
     "@astrojs/tailwind": "^6.0.2",
     "astro": "^5.5.2",
     "astro-i18next": "^1.0.0-beta.21",
-    "tsparticles": "^3.8.1"
+    "tsparticles": "^3.8.1",
+    "zenforge-portfolio": "file:"
   }
 }
