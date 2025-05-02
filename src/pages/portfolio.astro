@@ -15,182 +15,127 @@ import Footer from '../components/Footer.astro';
   <body class="bg-gray-900 text-white font-poppins">
     <Navbar />
 
-    <section class="container mx-auto px-4 py-12">
+    <section class="container mx-auto px-6 sm:px-12 py-12">
       <!-- Filosofía de trabajo reinstalada -->
       <div class="mb-8 text-center">
-        <h1 class="text-4xl font-bold text-blue-400 mb-4">Filosofía de ZenForge Studios</h1>
-        <p class="text-lg text-gray-300">
+        <h1 class="text-3xl sm:text-4xl font-bold text-blue-400 mb-4">Filosofía de ZenForge Studios</h1>
+        <p class="text-base sm:text-lg text-gray-300">
           Nos enfocamos en ofrecer soluciones únicas e innovadoras, garantizando altos estándares de calidad y un enfoque profesional que supera expectativas.
         </p>
-        <p class="text-md text-gray-400 mt-4">
+        <p class="text-sm sm:text-md text-gray-400 mt-4">
           Creemos en la formalidad, la excelencia técnica y la satisfacción de nuestros clientes en cada proyecto que emprendemos.
         </p>
       </div>
     
       <!-- Sección de proyectos -->
-      <h2 class="text-3xl font-bold text-gray-300 text-center mb-6">Nuestros Proyectos</h2>
-      <div class="grid grid-cols-1 gap-8 md:grid-cols-3">
+      <h2 class="text-2xl sm:text-3xl font-bold text-gray-300 text-center mb-6">Nuestros Proyectos</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
         <!-- Proyecto 1 -->
         <div class="bg-gray-800 rounded-lg shadow-lg flex flex-col p-6">
-          <img
-            src="banner1.png"
-            alt="LegendX Network"
-            class="w-full h-40 object-cover rounded-md mb-4"
-          />
-          <h3 class="text-xl font-bold text-blue-400 mb-2">LegendX Network | Servidor</h3>
-          <p class="text-gray-300 text-sm mb-6 flex-1">
+          <img src="banner1.png" alt="LegendX Network" class="w-full h-40 sm:h-60 object-cover rounded-md mb-4" />
+          <h3 class="text-lg sm:text-xl font-bold text-blue-400 mb-2">LegendX Network | Servidor</h3>
+          <p class="text-gray-300 text-sm sm:text-base mb-6 flex-1">
             Network de Minecraft dirigido a todo público. Modalidad principal: "Legendary Skyblock" basado en funciones de Hypixel Skyblock.
           </p>
-          <a
-            href="https://discord.gg/C4jRQJyWfZ"
-            class="inline-block px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600 transition mt-auto"
-          >
+          <a href="https://discord.gg/C4jRQJyWfZ"
+            class="inline-block px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600 transition mt-auto">
             Discord de LegendX
           </a>
         </div>
     
         <!-- Proyecto 2 -->
         <div class="bg-gray-800 rounded-lg shadow-lg flex flex-col p-6">
-          <img
-            src="bannermiby1.png"
-            alt="Miby | Discord Bot"
-            class="w-full h-40 object-cover rounded-md mb-4"
-          />
-          <h3 class="text-xl font-bold text-blue-400 mb-2">Miby | Discord Bot</h3>
-          <p class="text-gray-300 text-sm mb-6 flex-1">
+          <img src="bannermiby1.png" alt="Miby | Discord Bot" class="w-full h-40 sm:h-60 object-cover rounded-md mb-4" />
+          <h3 class="text-lg sm:text-xl font-bold text-blue-400 mb-2">Miby | Discord Bot</h3>
+          <p class="text-gray-300 text-sm sm:text-base mb-6 flex-1">
             Bot multipropósito con sistemas dinámicos, comandos personalizados y funciones avanzadas para la gestión de servidores.
           </p>
-          <a
-            href="https://discord.com/oauth2/authorize?client_id=BOT_ID&scope=bot"
-            class="inline-block px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600 transition mt-auto"
-          >
+          <a href="https://discord.com/oauth2/authorize?client_id=BOT_ID&scope=bot"
+            class="inline-block px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600 transition mt-auto">
             Invitar Bot
           </a>
         </div>
     
         <!-- Proyecto 3 -->
         <div class="bg-gray-800 rounded-lg shadow-lg flex flex-col p-6">
-          <img
-            src="ecojobs.png"
-            alt="ZFS EcoJobs Config"
-            class="w-full h-40 object-cover rounded-md mb-4"
-          />
-          <h3 class="text-xl font-bold text-blue-400 mb-2">ZFS EcoJobs | Config</h3>
-          <p class="text-gray-300 text-sm mb-6 flex-1">
+          <img src="ecojobs.png" alt="Miby | Discord Bot" class="w-full h-40 sm:h-60 object-cover rounded-md mb-4" />
+          <h3 class="text-lg sm:text-xl font-bold text-blue-400 mb-2">ZFS EcoJobs | Config</h3>
+          <p class="text-gray-300 text-sm sm:text-base mb-6 flex-1">
             Configuración avanzada para trabajos, con funciones optimizadas y un mejor toque que lo estándar del complemento.
           </p>
-          <a
-            href="https://builtbybit.com/resources/zfs-ecojobs-config.60361/"
-            class="inline-block px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600 transition mt-auto"
-          >
+          <a href="https://discord.com/oauth2/authorize?client_id=BOT_ID&scope=bot"
+            class="inline-block px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600 transition mt-auto">
             Ver Producto
           </a>
         </div>
+    
         <!-- Proyecto 4 -->
         <div class="bg-gray-800 rounded-lg shadow-lg flex flex-col p-6">
-          <img
-            src="ecopets.png"
-            alt="EcoPets Addon | Plugin"
-            class="w-full h-40 object-cover rounded-md mb-4"
-          />
-          <h3 class="text-xl font-bold text-blue-400 mb-2">EcoPets Addon | Plugin</h3>
-          <p class="text-gray-300 text-sm mb-6 flex-1">
+          <img src="ecopets.png" alt="Miby | Discord Bot" class="w-full h-40 sm:h-60 object-cover rounded-md mb-4" />
+          <h3 class="text-lg sm:text-xl font-bold text-blue-400 mb-2">EcoPets Addon | Plugin</h3>
+          <p class="text-gray-300 text-sm sm:text-base mb-6 flex-1">
             Network de Minecraft dirigido a todo público. Modalidad principal: "Legendary Skyblock" basado en funciones de Hypixel Skyblock.
           </p>
-          <a
-            href="*"
-            class="inline-block px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600 transition mt-auto"
-          >
+          <a href="https://discord.com/oauth2/authorize?client_id=BOT_ID&scope=bot"
+            class="inline-block px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600 transition mt-auto">
             Ver Producto
           </a>
         </div>
     
         <!-- Proyecto 5 -->
         <div class="bg-gray-800 rounded-lg shadow-lg flex flex-col p-6">
-          <img
-            src="tabscore.png"
-            alt="Tab & Score | Config"
-            class="w-full h-40 object-cover rounded-md mb-4"
-          />
-          <h3 class="text-xl font-bold text-blue-400 mb-2">Tab & Score | Config</h3>
-          <p class="text-gray-300 text-sm mb-6 flex-1">
-            ZFS Tab and Score Config ofrece una configuración completa para tabuladores y scoreboards, optimizada para personalización y funcionalidad
+          <img src="tabscore.png" alt="Miby | Discord Bot" class="w-full h-40 sm:h-60 object-cover rounded-md mb-4" />
+          <h3 class="text-lg sm:text-xl font-bold text-blue-400 mb-2">Tab & Score | Config</h3>
+          <p class="text-gray-300 text-sm sm:text-base mb-6 flex-1">
+            ZFS Tab and Score Config ofrece una configuración completa para tabuladores y scoreboards, optimizada para personalización y funcionalidad.
           </p>
-          <a
-            href="https://builtbybit.com/resources/zfs-tab-and-score-config.25937/"
-            class="inline-block px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600 transition mt-auto"
-          >
+          <a href="https://discord.com/oauth2/authorize?client_id=BOT_ID&scope=bot"
+            class="inline-block px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600 transition mt-auto">
             Ver Producto
           </a>
         </div>
     
         <!-- Proyecto 6 -->
         <div class="bg-gray-800 rounded-lg shadow-lg flex flex-col p-6">
-          <img
-            src="bungee.png"
-            alt="ZFS Bungee | Setup"
-            class="w-full h-40 object-cover rounded-md mb-4"
-          />
-          <h3 class="text-xl font-bold text-blue-400 mb-2">ZFS Bungee | Setup</h3>
-          <p class="text-gray-300 text-sm mb-6 flex-1">
+          <img src="bungee.png" alt="Miby | Discord Bot" class="w-full h-40 sm:h-60 object-cover rounded-md mb-4" />
+          <h3 class="text-lg sm:text-xl font-bold text-blue-400 mb-2">ZFS Bungee | Setup</h3>
+          <p class="text-gray-300 text-sm sm:text-base mb-6 flex-1">
             ZFS Bungee Setup ofrece configuración avanzada para servidores Minecraft, garantizando estabilidad, personalización y rendimiento óptimo para redes multijugador.
           </p>
-          <a
-            href="https://builtbybit.com/resources/zfs-bungee-setup.47133/"
-            class="inline-block px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600 transition mt-auto"
-          >
+          <a href="https://discord.com/oauth2/authorize?client_id=BOT_ID&scope=bot"
+            class="inline-block px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600 transition mt-auto">
             Ver Producto
           </a>
         </div>
       </div>
     </section>
 
-    <section class="container mx-auto px-4 py-12">
-      <h2 class="text-3xl font-bold text-gray-300 text-center mb-6">Lo que dicen nuestros clientes</h2>
+    <!-- Sección de reseñas -->
+    <section class="container mx-auto px-6 sm:px-12 py-12">
+      <h2 class="text-2xl sm:text-3xl font-bold text-gray-300 text-center mb-6">Lo que dicen nuestros clientes</h2>
       <div class="relative overflow-hidden">
-        <div
-          id="review-slider"
-          class="flex transition-transform duration-700 ease-in-out"
-        >
+        <div id="review-slider" class="flex transition-transform duration-700 ease-in-out">
+          
           <!-- Grupo 1: Reseñas -->
-          <div class="flex space-x-6 min-w-full">
-            <!-- Reseña 1 -->
-            <div class="bg-gray-800 rounded-lg shadow-lg flex items-start p-6 w-full h-48">
-              <img
-                src="/Kryz.png"
-                alt="Alex Rivera"
-                class="w-16 h-16 rounded-full mr-4"
-              />
+          <div class="flex flex-col sm:flex-row space-x-0 sm:space-x-6 min-w-full">
+            <div class="bg-gray-800 rounded-lg shadow-lg flex items-start p-6 w-full h-auto sm:h-48">
+              <img src="/Kryz.png" alt="Alex Rivera" class="w-16 h-16 rounded-full mr-4" />
               <div class="flex flex-col flex-1 justify-between">
-                <div>
-                  <h3 class="text-xl font-bold text-blue-400">Alex Rivera</h3>
-                  <h4 class="text-sm text-gray-400 mb-2">Servidor: LegendX Network</h4>
-                  <p class="text-gray-300 text-sm">
-                    "Buen servicio que hace cuacxdpe su estudio ZenForge es de calidad."
-                  </p>
-                </div>
-                <!-- Estrellas -->
+                <h3 class="text-lg sm:text-xl font-bold text-blue-400">Alex Rivera</h3>
+                <h4 class="text-sm text-gray-400 mb-2">Servidor: LegendX Network</h4>
+                <p class="text-gray-300 text-sm sm:text-base">"Buen servicio que hace cuacxdpe, su estudio ZenForge es de calidad."</p>
                 <div class="mt-4 flex">
                   <span class="text-yellow-400 text-lg">★★★★★</span>
                 </div>
               </div>
             </div>
     
-            <!-- Reseña 2 -->
-            <div class="bg-gray-800 rounded-lg shadow-lg flex items-start p-6 w-full h-48">
-              <img
-                src="/Kryz.png"
-                alt="Kryz"
-                class="w-16 h-16 rounded-full mr-4"
-              />
+            <div class="bg-gray-800 rounded-lg shadow-lg flex items-start p-6 w-full h-auto sm:h-48">
+              <img src="/Kryz.png" alt="Cliente Anónimo" class="w-16 h-16 rounded-full mr-4" />
               <div class="flex flex-col flex-1 justify-between">
-                <div>
-                  <h3 class="text-xl font-bold text-blue-400">Kryz</h3>
-                  <h4 class="text-sm text-gray-400 mb-2">Servidor: Kryz MC</h4>
-                  <p class="text-gray-300 text-sm">
-                    "La configuración y decoración de mi servidor de Discord fue increíble."
-                  </p>
-                </div>
+                <h3 class="text-lg sm:text-xl font-bold text-blue-400">Cliente Anónimo</h3>
+                <h4 class="text-sm text-gray-400 mb-2">Servidor: XYZ Server</h4>
+                <p class="text-gray-300 text-sm sm:text-base">"Gran profesionalismo y atención en cada detalle. Recomendado al 100%."</p>
                 <div class="mt-4 flex">
                   <span class="text-yellow-400 text-lg">★★★★★</span>
                 </div>
@@ -199,43 +144,25 @@ import Footer from '../components/Footer.astro';
           </div>
     
           <!-- Grupo 2: Reseñas -->
-          <div class="flex space-x-6 min-w-full">
-            <!-- Reseña 3 -->
-            <div class="bg-gray-800 rounded-lg shadow-lg flex items-start p-6 w-full h-48">
-              <img
-                src="/Kryz.png"
-                alt="En"
-                class="w-16 h-16 rounded-full mr-4"
-              />
+          <div class="flex flex-col sm:flex-row space-x-0 sm:space-x-6 min-w-full">
+            <div class="bg-gray-800 rounded-lg shadow-lg flex items-start p-6 w-full h-auto sm:h-48">
+              <img src="/Kryz.png" alt="EnCraft" class="w-16 h-16 rounded-full mr-4" />
               <div class="flex flex-col flex-1 justify-between">
-                <div>
-                  <h3 class="text-xl font-bold text-blue-400">En</h3>
-                  <h4 class="text-sm text-gray-400 mb-2">Servidor: EnCraft</h4>
-                  <p class="text-gray-300 text-sm">
-                    "Los mejores precios en el mercado."
-                  </p>
-                </div>
+                <h3 class="text-lg sm:text-xl font-bold text-blue-400">EnCraft</h3>
+                <h4 class="text-sm text-gray-400 mb-2">Servidor: EnCraft</h4>
+                <p class="text-gray-300 text-sm sm:text-base">"Los mejores precios en el mercado."</p>
                 <div class="mt-4 flex">
                   <span class="text-yellow-400 text-lg">★★★★☆</span>
                 </div>
               </div>
             </div>
     
-            <!-- Reseña 4 -->
-            <div class="bg-gray-800 rounded-lg shadow-lg flex items-start p-6 w-full h-48">
-              <img
-                src="/Kryz.png"
-                alt="Cliente 4"
-                class="w-16 h-16 rounded-full mr-4"
-              />
+            <div class="bg-gray-800 rounded-lg shadow-lg flex items-start p-6 w-full h-auto sm:h-48">
+              <img src="/Kryz.png" alt="David García" class="w-16 h-16 rounded-full mr-4" />
               <div class="flex flex-col flex-1 justify-between">
-                <div>
-                  <h3 class="text-xl font-bold text-blue-400">Cliente 4</h3>
-                  <h4 class="text-sm text-gray-400 mb-2">Servidor: SolCraft</h4>
-                  <p class="text-gray-300 text-sm">
-                    "Excelente solución, han mejorado mis proyectos."
-                  </p>
-                </div>
+                <h3 class="text-lg sm:text-xl font-bold text-blue-400">David García</h3>
+                <h4 class="text-sm text-gray-400 mb-2">Servidor: TechX</h4>
+                <p class="text-gray-300 text-sm sm:text-base">"Un equipo increíble, soluciones rápidas y una atención impecable."</p>
                 <div class="mt-4 flex">
                   <span class="text-yellow-400 text-lg">★★★★★</span>
                 </div>
@@ -244,34 +171,29 @@ import Footer from '../components/Footer.astro';
           </div>
         </div>
     
-        <!-- Botón reducido y ajustado -->
-        <button
-          id="next-button"
+        <!-- Botón de navegación -->
+        <button id="next-button"
           class="absolute right-0 top-1/2 transform -translate-y-1/2 bg-blue-500 text-white px-4 py-6 rounded-l-md hover:bg-blue-600 transition shadow-md"
-          style="z-index: 10;"
-        >
+          style="z-index: 10;">
           →
         </button>
       </div>
     </section>
-    
+
+    <Footer />
+
     <script>
       let currentIndex = 0;
       const slider = document.getElementById("review-slider");
       const nextButton = document.getElementById("next-button");
-    
+
       if (slider && nextButton) {
         const groups = slider.children;
-    
         nextButton.addEventListener("click", () => {
           slider.style.transition = "transform 0.7s ease-in-out";
           currentIndex = (currentIndex + 1) % groups.length;
           slider.style.transform = `translateX(-${currentIndex * 100}%)`;
         });
-      } else {
-        console.error(
-          'Element with ID "review-slider" or "next-button" not found.'
-        );
       }
     </script>
   </body>

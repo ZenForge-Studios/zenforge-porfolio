@@ -16,18 +16,20 @@ import Footer from '../components/Footer.astro';
     <Navbar />
 
     <!-- Sección de Cotizar -->
-    <main class="container mx-auto px-4 py-12">
-      <h1 class="text-4xl font-bold text-center mb-8 text-blue-400">Cotiza con Nosotros</h1>
-      <p class="text-lg text-center text-gray-300 mb-6">
+    <main class="container mx-auto px-6 sm:px-12 py-12 text-center">
+      <h1 class="text-3xl sm:text-4xl font-bold mb-8 text-blue-400">Cotiza con Nosotros</h1>
+      <p class="text-base sm:text-lg text-gray-300 mb-6">
         Estamos listos para ayudarte a llevar tu proyecto al siguiente nivel. Haz clic en el botón de abajo para unirte a nuestro servidor de Discord y solicitar tu cotización.
       </p>
-      <div class="text-center">
+      
+      <!-- Botón de cotización adaptativo -->
+      <div class="flex justify-center">
         <a
           href="https://discord.gg/your-discord-invite"
-          class="inline-block px-8 py-3 bg-blue-500 text-white font-bold text-lg rounded-lg shadow-lg hover:bg-blue-600 transition"
+          class="inline-block px-6 sm:px-8 py-3 bg-blue-500 text-white font-bold text-base sm:text-lg rounded-lg shadow-lg hover:bg-blue-600 transition"
           target="_blank"
         >
-          Solicitar Cotización en Discord
+          🚀 Solicitar Cotización en Discord
         </a>
       </div>
     </main>

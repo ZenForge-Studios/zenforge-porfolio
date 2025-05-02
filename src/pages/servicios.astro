@@ -16,80 +16,54 @@ import Footer from '../components/Footer.astro';
     <Navbar />
 
     <!-- Sección de Servicios -->
-    <main class="container mx-auto px-4 py-12">
-      <h1 class="text-4xl font-bold text-center mb-8 text-blue-400">Nuestros Servicios</h1>
+    <main class="container mx-auto px-6 sm:px-12 py-12">
+      <h1 class="text-3xl sm:text-4xl font-bold text-center mb-8 text-blue-400">Nuestros Servicios</h1>
       
       <!-- Categorías de servicios -->
       <section class="mb-16">
-        <h2 class="text-3xl font-bold text-blue-400 mb-6">Minecraft</h2>
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <h2 class="text-2xl sm:text-3xl font-bold text-blue-400 mb-6">Minecraft</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
           <div class="bg-gray-800 p-6 rounded-lg shadow-lg hover:bg-gray-700 transition">
-            <img
-              src="/en.png"
-              alt="Minecraft Service 1"
-              class="rounded-lg mb-4"
-            />
-            <h3 class="text-xl font-bold text-blue-400">Configuración de Servidores</h3>
-            <p class="text-gray-300 mt-3">Servidores listos para competir con configuraciones avanzadas.</p>
+            <img src="/en.png" alt="Minecraft Service 1" class="w-full h-40 sm:h-60 object-cover rounded-lg mb-4" />
+            <h3 class="text-lg sm:text-xl font-bold text-blue-400">Configuración de Servidores</h3>
+            <p class="text-gray-300 mt-2 text-sm sm:text-base">Servidores listos para competir con configuraciones avanzadas.</p>
           </div>
           <div class="bg-gray-800 p-6 rounded-lg shadow-lg hover:bg-gray-700 transition">
-            <img
-              src="/en1.png"
-              alt="Minecraft Service 2"
-              class="rounded-lg mb-4"
-            />
-            <h3 class="text-xl font-bold text-blue-400">Construcción de Mapas</h3>
-            <p class="text-gray-300 mt-3">Creamos lobbies y mapas únicos para modalidades de juego.</p>
+            <img src="/en1.png" alt="Minecraft Service 2" class="w-full h-40 sm:h-60 object-cover rounded-lg mb-4" />
+            <h3 class="text-lg sm:text-xl font-bold text-blue-400">Construcción de Mapas</h3>
+            <p class="text-gray-300 mt-2 text-sm sm:text-base">Creamos lobbies y mapas únicos para modalidades de juego.</p>
           </div>
-          <!-- Agregar más tarjetas de servicios -->
         </div>
       </section>
 
       <section class="mb-16">
-        <h2 class="text-3xl font-bold text-blue-400 mb-6">Discord</h2>
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <h2 class="text-2xl sm:text-3xl font-bold text-blue-400 mb-6">Discord</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
           <div class="bg-gray-800 p-6 rounded-lg shadow-lg hover:bg-gray-700 transition">
-            <img
-              src="/es.png"
-              alt="Discord Service 1"
-              class="rounded-lg mb-4"
-            />
-            <h3 class="text-xl font-bold text-blue-400">Desarrollo de Bots</h3>
-            <p class="text-gray-300 mt-3">Creamos bots personalizados para automatizar servidores de Discord.</p>
+            <img src="/es.png" alt="Discord Service 1" class="w-full h-40 sm:h-60 object-cover rounded-lg mb-4" />
+            <h3 class="text-lg sm:text-xl font-bold text-blue-400">Desarrollo de Bots</h3>
+            <p class="text-gray-300 mt-2 text-sm sm:text-base">Creamos bots personalizados para automatizar servidores de Discord.</p>
           </div>
           <div class="bg-gray-800 p-6 rounded-lg shadow-lg hover:bg-gray-700 transition">
-            <img
-              src="/es1.png"
-              alt="Discord Service 2"
-              class="rounded-lg mb-4"
-            />
-            <h3 class="text-xl font-bold text-blue-400">Configuración de Servidores</h3>
-            <p class="text-gray-300 mt-3">Organización profesional y herramientas para comunidades.</p>
+            <img src="/es1.png" alt="Discord Service 2" class="w-full h-40 sm:h-60 object-cover rounded-lg mb-4" />
+            <h3 class="text-lg sm:text-xl font-bold text-blue-400">Configuración de Servidores</h3>
+            <p class="text-gray-300 mt-2 text-sm sm:text-base">Organización profesional y herramientas para comunidades.</p>
           </div>
-          <!-- Agregar más tarjetas de servicios -->
         </div>
       </section>
 
       <section class="mb-16">
-        <h2 class="text-3xl font-bold text-blue-400 mb-6">Diseño Gráfico</h2>
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <h2 class="text-2xl sm:text-3xl font-bold text-blue-400 mb-6">Diseño Grafico</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
           <div class="bg-gray-800 p-6 rounded-lg shadow-lg hover:bg-gray-700 transition">
-            <img
-              src="/en.png"
-              alt="Graphic Design 1"
-              class="rounded-lg mb-4"
-            />
-            <h3 class="text-xl font-bold text-blue-400">Creación de Logos</h3>
-            <p class="text-gray-300 mt-3">Diseños únicos y personalizados para marcas y proyectos.</p>
+            <img src="/es.png" alt="Discord Service 1" class="w-full h-40 sm:h-60 object-cover rounded-lg mb-4" />
+            <h3 class="text-lg sm:text-xl font-bold text-blue-400">Creación de Logos</h3>
+            <p class="text-gray-300 mt-2 text-sm sm:text-base">Diseños únicos y personalizados para marcas y proyectos.</p>
           </div>
           <div class="bg-gray-800 p-6 rounded-lg shadow-lg hover:bg-gray-700 transition">
-            <img
-              src="/en1.png"
-              alt="Graphic Design 2"
-              class="rounded-lg mb-4"
-            />
-            <h3 class="text-xl font-bold text-blue-400">Renders 3D</h3>
-            <p class="text-gray-300 mt-3">Visualizaciones tridimensionales de alta calidad.</p>
+            <img src="/es1.png" alt="Discord Service 2" class="w-full h-40 sm:h-60 object-cover rounded-lg mb-4" />
+            <h3 class="text-lg sm:text-xl font-bold text-blue-400">Renders 3D</h3>
+            <p class="text-gray-300 mt-2 text-sm sm:text-base">Visualizaciones tridimensionales de alta calidad.</p>
           </div>
         </div>
       </section>

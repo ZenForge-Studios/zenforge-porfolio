@@ -1,16 +1,16 @@
 <nav class="bg-gray-900">
-  <!-- Promoción destacada con ancho completo -->
+  <!-- Promoción destacada con ancho completo y separación -->
   <div class="w-full bg-gray-900 text-white py-2 text-center text-sm font-semibold relative">
     🚀 ¡Descuento Exclusivo! ZFS10 en TECT HOST – Aprovéchalo ahora 🔥
-    <div class="absolute bottom-0 left-0 w-full h-[2px] bg-white/20"></div> <!-- Línea de separación -->
+    <div class="absolute bottom-0 left-0 w-full h-[2px] bg-white/20"></div>
   </div>
 
-  <div class="container mx-auto flex justify-between items-center p-4">
+  <div class="container mx-auto flex flex-wrap justify-between items-center p-4">
     <!-- Logo -->
     <a href="/" class="text-3xl font-bold text-blue-400 hover:text-blue-500 transition">ZenForge Studios</a>
 
     <!-- Menú de navegación -->
-    <ul class="flex space-x-8 text-lg font-medium">
+    <ul class="hidden md:flex space-x-8 text-lg font-medium">
       <li><a href="/" class="nav-item px-4 py-2 rounded-md transition">Inicio</a></li>
       <li><a href="/portfolio" class="nav-item px-4 py-2 rounded-md transition">Portafolio</a></li>
       <li><a href="/servicios" class="nav-item px-4 py-2 rounded-md transition">Servicios</a></li>
@@ -23,6 +23,21 @@
       class="bg-blue-500 text-white px-5 py-2 rounded-md font-semibold shadow-md hover:bg-blue-600 transition focus:ring focus:ring-blue-300">
       🔥 Cotiza Ahora
     </a>
+
+    <!-- Menú móvil -->
+    <button id="menu-toggle" class="md:hidden text-white focus:outline-none">
+      ☰
+    </button>
+    <div id="mobile-menu" class="hidden md:hidden absolute top-16 left-0 w-full bg-gray-900">
+      <ul class="flex flex-col space-y-4 p-4 text-lg font-medium">
+        <li><a href="/" class="block px-4 py-2">Inicio</a></li>
+        <li><a href="/portfolio" class="block px-4 py-2">Portafolio</a></li>
+        <li><a href="/servicios" class="block px-4 py-2">Servicios</a></li>
+        <li><a href="/galeria" class="block px-4 py-2">Galería</a></li>
+        <li><a href="/contactanos" class="block px-4 py-2">Contacto</a></li>
+      </ul>
+    </div>
   </div>
+
   <script src="/src/components/Navbar.js" defer></script>
 </nav>
