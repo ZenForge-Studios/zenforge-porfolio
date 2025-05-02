@@ -62,4 +62,4 @@ document.addEventListener("DOMContentLoaded", () => {
   } else {
     console.error("Elemento 'menu-toggle' o 'mobile-menu' no encontrado.");
   }
-});
+}); 
