@@ -1,21 +1,28 @@
-<nav class="bg-gray-900 text-white py-4 shadow-lg border-b border-gray-700">
-  <div class="container mx-auto flex justify-between items-center">
-    <!-- Logo y promoción -->
-    <div class="flex items-center space-x-4">
-      <a href="/" class="text-2xl font-bold hover:text-blue-400">ZenForge Studios</a>
-      <a href="https://billing.tect.host/index.php/order/forms/a/MjQ1" class="bg-red-500 text-white px-2 py-1 rounded text-sm">¡10% OFF! Código ZFS10</a></li>
-    </div>
-    <!-- Menú -->
-    <ul class="flex space-x-6">
-      <li><a href="/" class="hover:text-blue-400">Inicio</a></li>
-      <li><a href="/portfolio" class="hover:text-blue-400">Portafolio</a></li>
-      <li><a href="/servicios" class="hover:text-blue-400">Servicios</a></li>
-      <li><a href="/galeria" class="hover:text-blue-400">Galeria</a></li>
-      <li><a href="/contactanos" class="hover:text-blue-400">Contacto</a></li>
+<nav class="bg-gray-900">
+  <!-- Promoción destacada con ancho completo -->
+  <div class="w-full bg-gray-900 text-white py-2 text-center text-sm font-semibold relative">
+    🚀 ¡Descuento Exclusivo! ZFS10 en TECT HOST – Aprovéchalo ahora 🔥
+    <div class="absolute bottom-0 left-0 w-full h-[2px] bg-white/20"></div> <!-- Línea de separación -->
+  </div>
+
+  <div class="container mx-auto flex justify-between items-center p-4">
+    <!-- Logo -->
+    <a href="/" class="text-3xl font-bold text-blue-400 hover:text-blue-500 transition">ZenForge Studios</a>
+
+    <!-- Menú de navegación -->
+    <ul class="flex space-x-8 text-lg font-medium">
+      <li><a href="/" class="nav-item px-4 py-2 rounded-md transition">Inicio</a></li>
+      <li><a href="/portfolio" class="nav-item px-4 py-2 rounded-md transition">Portafolio</a></li>
+      <li><a href="/servicios" class="nav-item px-4 py-2 rounded-md transition">Servicios</a></li>
+      <li><a href="/galeria" class="nav-item px-4 py-2 rounded-md transition text-sm">Galería</a></li>
+      <li><a href="/contactanos" class="nav-item px-4 py-2 rounded-md transition text-sm">Contacto</a></li>
     </ul>
-    <!-- Botón -->
-    <a href="/cotizar" class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 transition">
-      Solicitar
+
+    <!-- Botón de acción mejorado -->
+    <a href="/cotizar"
+      class="bg-blue-500 text-white px-5 py-2 rounded-md font-semibold shadow-md hover:bg-blue-600 transition focus:ring focus:ring-blue-300">
+      🔥 Cotiza Ahora
     </a>
   </div>
+  <script src="/src/components/Navbar.js" defer></script>
 </nav>
