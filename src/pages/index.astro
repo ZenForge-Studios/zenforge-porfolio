@@ -1,6 +1,7 @@
 ---
 import Navbar from '../components/Navbar.astro';
 import Footer from '../components/Footer.astro';
+import { Icon } from 'astro-icon/components'; // 👈 Importación correcta
 ---
 
 <!DOCTYPE html>
@@ -32,12 +33,14 @@ import Footer from '../components/Footer.astro';
 
       <div class="flex flex-wrap justify-center gap-4 sm:gap-6">
         <a href="/portfolio"
-          class="px-6 sm:px-8 py-3 bg-blue-500 text-white font-bold rounded-lg shadow-lg animate-fadeIn hover:bg-blue-600 transition text-sm sm:text-base">
-          🚀 Explora Nuestros Proyectos
+          class="flex items-center gap-2 px-6 sm:px-8 py-3 bg-blue-500 text-white font-bold rounded-lg shadow-lg animate-fadeIn hover:bg-blue-600 transition text-sm sm:text-base">
+          <Icon name="mdi:rocket-launch" class="w-5 h-5 sm:w-6 sm:h-6" />
+          Explora Nuestros Proyectos
         </a>
         <a href="/servicios"
-          class="px-6 sm:px-8 py-3 bg-gray-700 text-white font-bold rounded-lg shadow-lg animate-fadeIn hover:bg-gray-800 transition text-sm sm:text-base">
-          🌈 Descubre Nuestros Servicios
+          class="flex items-center gap-2 px-6 sm:px-8 py-3 bg-gray-700 text-white font-bold rounded-lg shadow-lg animate-fadeIn hover:bg-gray-800 transition text-sm sm:text-base">
+          <Icon name="mdi:palette" class="w-5 h-5 sm:w-6 sm:h-6" />
+          Descubre Nuestros Servicios
         </a>
       </div>
     </main>

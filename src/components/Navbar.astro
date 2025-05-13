@@ -1,7 +1,12 @@
+---
+import { Icon } from 'astro-icon/components';
+---
 <nav class="bg-gray-900">
   <!-- Promoción destacada con ancho completo y separación -->
   <div class="w-full bg-gray-900 text-white py-2 text-center text-sm font-semibold relative">
-    🚀 ¡Descuento Exclusivo! ZFS10 en TECT HOST – Aprovéchalo ahora 🔥
+    <Icon name="mdi:rocket-launch" class="inline-block w-4 h-4 align-middle mr-1" />
+    ¡Descuento Exclusivo! ZFS10 en TECT HOST – Aprovéchalo ahora
+    <Icon name="mdi:fire" class="inline-block w-4 h-4 align-middle ml-1" />
     <div class="absolute bottom-0 left-0 w-full h-[2px] bg-white/20"></div>
   </div>
 
@@ -20,14 +25,53 @@
 
     <!-- Botón de acción mejorado -->
     <a href="/cotizar"
-      class="bg-blue-500 text-white px-5 py-2 rounded-md font-semibold shadow-md hover:bg-blue-600 transition focus:ring focus:ring-blue-300">
-      🔥 Cotiza Ahora
+      class="flex items-center gap-2 bg-blue-500 text-white px-5 py-2 rounded-md font-semibold shadow-md hover:bg-blue-600 transition focus:ring focus:ring-blue-300">
+      <Icon name="mdi:fire" class="w-5 h-5" />
+      Cotiza Ahora
     </a>
+
+    <!-- Botón de cambio de idioma -->
+    <a href="/en/portfolio"
+      class="flex items-center gap-2 bg-gray-700 text-white px-4 py-2 rounded-md font-semibold shadow-md hover:bg-gray-600 transition">
+      <Icon name="ph:globe-hemisphere-west" class="w-5 h-5" />
+      Portfolio EN
+    </a>
+
+    <!-- Botón único para login/registro -->
+    <button id="auth-toggle"
+      class="flex items-center gap-2 bg-gray-700 text-white px-4 py-2 rounded-md font-semibold shadow-md hover:bg-gray-600 transition">
+      <Icon name="mdi:key" class="w-5 h-5" />
+      Acceder
+    </button>
+
+    <!-- Modal de autenticación -->
+    <div id="auth-modal" class="hidden fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center">
+      <div class="bg-gray-900 p-6 rounded-lg shadow-lg text-white w-80">
+        <h2 class="text-xl font-bold text-center mb-4">Iniciar sesión / Registrarse</h2>
+        <input id="email-input" type="email" placeholder="Correo electrónico"
+          class="w-full p-2 rounded mb-2 bg-gray-800 text-white">
+        <input id="password-input" type="password" placeholder="Contraseña"
+          class="w-full p-2 rounded mb-2 bg-gray-800 text-white">
+        <button id="auth-btn"
+          class="flex items-center justify-center gap-2 w-full bg-blue-500 py-2 rounded font-bold hover:bg-blue-600 transition">
+          <Icon name="mdi:lock-open-variant" class="w-5 h-5" />
+          Continuar
+        </button>
+        <button id="close-modal"
+          class="flex items-center justify-center gap-2 w-full bg-red-500 py-2 rounded font-bold hover:bg-red-600 mt-2 transition">
+          <Icon name="mdi:close-circle-outline" class="w-5 h-5" />
+          Cerrar
+        </button>
+      </div>
+    </div>
+
+    <script src="/src/utils/auth.js" type="module" defer></script>
 
     <!-- Menú móvil -->
     <button id="menu-toggle" class="md:hidden text-white focus:outline-none">
-      ☰
+      <Icon name="mdi:menu" class="w-6 h-6" />
     </button>
+
     <div id="mobile-menu" class="hidden md:hidden absolute top-16 left-0 w-full bg-gray-900">
       <ul class="flex flex-col space-y-4 p-4 text-lg font-medium">
         <li><a href="/" class="block px-4 py-2">Inicio</a></li>
