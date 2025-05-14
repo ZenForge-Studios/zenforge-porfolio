@@ -75,39 +75,45 @@ import { Icon } from 'astro-icon/components'; // 👈 Importación correcta
 
     <!-- Sección de reseñas reincorporada -->
 <section class="container mx-auto px-6 sm:px-12 py-12">
-  <h2 class="text-2xl sm:text-3xl font-bold text-gray-300 text-center mb-6">Lo que dicen nuestros clientes</h2>
-  <div class="relative overflow-hidden max-w-2xl mx-auto" x-data="{ reviewIndex: 0, reviews: [
-    { img: '/Kryz.png', name: 'Alex Rivera', server: 'LegendX Network', text: 'Buen servicio, ZenForge tiene calidad.', rating: '★★★★★' },
-    { img: '/Kryz.png', name: 'Cliente Anónimo', server: 'XYZ Server', text: 'Gran profesionalismo y atención en cada detalle.', rating: '★★★★★' },
-    { img: '/Kryz.png', name: 'EnCraft', server: 'EnCraft', text: 'Los mejores precios en el mercado.', rating: '★★★★☆' },
-    { img: '/Kryz.png', name: 'David García', server: 'TechX', text: 'Un equipo increíble, soluciones rápidas y una atención impecable.', rating: '★★★★★' }
+  <h2 class="text-3xl sm:text-3xl font-bold text-gray-300 text-center mb-6">Lo que dicen nuestros clientes</h2>
+  <div class="relative overflow-hidden max-w-4xl mx-auto" x-data="{ reviewIndex: 0, reviewsPairs: [
+    [{ img: '/Kryz.png', name: 'Kryz', servicio: 'Discord Server', text: 'La configuración y decoración de mi servidor de Discord fue increíble, fue rápido y se acomodó a mis peticiones junto con la creación de un logo tal y como quería, un excelente servicio.', rating: '★★★★★' },
+     { img: '/Dacizco.png', name: 'Dacizco', servicio: 'Desarrollo', text: 'Buen servicio que hace cuacxdpe su estudio ZenForge es de calidad.', rating: '★★★★★' }],
+    
+    [{ img: '/lxicon.png', name: 'EnCraft', servicio: 'Diseño y Config', text: 'Los mejores precios en el mercado.', rating: '★★★★☆' },
+     { img: '/ecicon.png', name: 'David García', servicio: 'Diseño y Config', text: 'Un equipo increíble, soluciones rápidas y una atención impecable.', rating: '★★★★★' }]
   ]}">
 
-    <div class="flex space-x-6 transition-transform duration-700 ease-in-out" 
-         :style="'transform: translateX(-' + reviewIndex * 100 + '%)'">
-      <template x-for="(review, index) in reviews" :key="index">
-        <div class="w-full flex flex-shrink-0 items-center p-6 bg-gray-800 rounded-lg shadow-lg text-center">
-          <img :src="review.img" :alt="review.name" class="w-16 h-16 rounded-full mr-4" />
-          <div class="flex flex-col flex-1 justify-between">
-            <h3 class="text-lg sm:text-xl font-bold text-blue-400" x-text="review.name"></h3>
-            <h4 class="text-sm text-gray-400 mb-2" x-text="'Servidor: ' + review.server"></h4>
-            <p class="text-gray-300 text-sm sm:text-base" x-text="review.text"></p>
-            <!-- Estrellas centradas y más grandes -->
-            <div class="mt-4 flex justify-center text-2xl">
-              <span class="text-yellow-400 font-bold" x-text="review.rating"></span>
+    <!-- Contenedor con carrusel en formato 2x2 -->
+    <div class="flex transition-transform duration-700 ease-in-out"
+         :style="'transform: translateX(calc(-' + reviewIndex * 100 + '%))'">
+      <template x-for="(reviewsGroup, index) in reviewsPairs" :key="index">
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-8 w-full flex-shrink-0 mx-auto p-6 bg-gray-800 rounded-lg shadow-lg text-center">
+          <template x-for="(review, subIndex) in reviewsGroup" :key="subIndex">
+            <div class="flex items-center p-4 bg-gray-900 rounded-lg shadow-md">
+              <img :src="review.img" :alt="review.name" class="w-16 h-16 rounded-full mr-4" />
+              <div class="flex flex-col flex-1 justify-between">
+                <h3 class="text-lg sm:text-xl font-bold text-blue-400" x-text="review.name"></h3>
+                <h4 class="text-sm text-gray-400 mb-2" x-text="'Servicio: ' + review.servicio"></h4>
+                <p class="text-gray-300 text-sm sm:text-base" x-text="review.text"></p>
+                <div class="mt-4 flex justify-center text-2xl">
+                  <span class="text-yellow-400 font-bold" x-text="review.rating"></span>
+                </div>
+              </div>
             </div>
-          </div>
+          </template>
         </div>
       </template>
     </div>
-    <!-- Botones de navegación debajo del carrusel -->
+
+    <!-- Botones de navegación para el carrusel -->
     <div class="flex justify-center mt-6 space-x-4">
-      <button @click="reviewIndex = reviewIndex === 0 ? reviews.length - 1 : reviewIndex - 1" 
+      <button @click="reviewIndex = reviewIndex === 0 ? reviewsPairs.length - 1 : reviewIndex - 1" 
         class="bg-blue-500 px-4 py-2 rounded-full text-white hover:bg-blue-600 transition flex items-center space-x-2">
         <Icon name="mdi:arrow-left-bold-circle" class="w-6 h-6" />
         <span>Anterior</span>
       </button>
-      <button @click="reviewIndex = reviewIndex === reviews.length - 1 ? 0 : reviewIndex + 1" 
+      <button @click="reviewIndex = reviewIndex === reviewsPairs.length - 1 ? 0 : reviewIndex + 1" 
         class="bg-blue-500 px-4 py-2 rounded-full text-white hover:bg-blue-600 transition flex items-center space-x-2">
         <span>Siguiente</span>
         <Icon name="mdi:arrow-right-bold-circle" class="w-6 h-6" />
