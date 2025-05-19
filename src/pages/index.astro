@@ -1,6 +1,6 @@
 ---
+import Navbar from '../components/Navbar.astro';
 import Footer from '../components/Footer.astro';
-import { Navbar } from "../components/Navbar";
 import { Icon } from 'astro-icon/components'; // 👈 Importación correcta
 ---
 
@@ -14,7 +14,7 @@ import { Icon } from 'astro-icon/components'; // 👈 Importación correcta
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" />
   </head>
   <body class="bg-gray-900 text-white font-poppins">
-    <Navbar client:load/>
+    <Navbar />
 
     <!-- Hero Section -->
     <main class="min-h-screen flex flex-col justify-center items-center bg-gray-900 px-6 sm:px-12">

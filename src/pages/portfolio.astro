@@ -1,5 +1,5 @@
 ---
-import { Navbar } from "../components/Navbar";
+import Navbar from '../components/Navbar.astro';
 import Footer from '../components/Footer.astro';
 import { Icon } from 'astro-icon/components'; // 👈 Importación correcta
 ---
@@ -15,7 +15,7 @@ import { Icon } from 'astro-icon/components'; // 👈 Importación correcta
     <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
   </head>
   <body class="bg-gray-900 text-white font-poppins">
-    <Navbar client:load/>
+    <Navbar />
 
 <section class="container mx-auto px-6 sm:px-12 py-12">
   <h2 class="text-2xl sm:text-3xl font-bold text-gray-300 text-center mb-6">Nuestros Proyectos</h2>
@@ -33,8 +33,8 @@ import { Icon } from 'astro-icon/components'; // 👈 Importación correcta
       { img: 'bungee.png', title: 'ZFS Bungee | Setup', desc: 'ZFS Bungee Setup ofrece configuración avanzada para servidores Minecraft, garantizando estabilidad, personalización y rendimiento óptimo para redes multijugador.', link: '#' }
     ],
     [
-      { img: 'kitec.png', title: 'Kit EldoriaCraft | Desing', desc: 'Este kit es lo que le proporcionamos a nuestros clientes al momento de contratar nuestro servicio de diseño, En este caso es un kit para el branding del servidor de EldoriaCraft.', link: 'eldoriacraft.pdf' },
-      { img: 'kitzfs.png', title: 'Kit ZenForge | Desing', desc: 'Este kit es lo que le proporcionamos a nuestros clientes al momento de contratar nuestro servicio de diseño. En este caso, es un kit para ZenForge', link: 'zenforge.pdf'}
+      { img: 'kitec.png', title: 'Kit EldoriaCraft | Desing', desc: 'Este kit es lo que le proporcionamos a nuestros clientes al momento de contratar nuestro servicio de diseño, En este caso es un kit para el branding del servidor de EldoriaCraft.', link: '/eldoriacraft.pdf' },
+      { img: 'kitzfs.png', title: 'Kit ZenForge | Desing', desc: 'Este kit es lo que le proporcionamos a nuestros clientes al momento de contratar nuestro servicio de diseño. En este caso, es un kit para ZenForge', link: '/zenforge.pdf'}
     ]
   ]}">
 
@@ -72,7 +72,7 @@ import { Icon } from 'astro-icon/components'; // 👈 Importación correcta
     </div>
   </div>
 </section>
-
+ 
     <!-- Sección de reseñas reincorporada -->
 <section class="container mx-auto px-6 sm:px-12 py-12">
   <h2 class="text-3xl sm:text-3xl font-bold text-gray-300 text-center mb-6">Lo que dicen nuestros clientes</h2>

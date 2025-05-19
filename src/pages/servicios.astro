@@ -1,5 +1,5 @@
 ---
-import { Navbar } from "../components/Navbar";
+import Navbar from '../components/Navbar.astro';
 import Footer from '../components/Footer.astro';
 ---
 
@@ -13,7 +13,7 @@ import Footer from '../components/Footer.astro';
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" />
   </head>
   <body class="bg-gray-900 text-white font-poppins">
-    <Navbar client:load/>
+    <Navbar />
 
     <!-- Sección de Servicios -->
     <main class="container mx-auto px-6 sm:px-12 py-12">
