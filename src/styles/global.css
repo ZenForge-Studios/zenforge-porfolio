@@ -2,19 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-    --blue: #484a4e; /* Color por defecto */
-}
-
-/* Ajustes generales */
-body {
-    margin: 0;
-    padding: 0;
-    font-family: 'Poppins', sans-serif;
-    color: white;
-    background-color: #000;
-    overflow-x: hidden; /* Evita scroll lateral en móviles */
-}
 
 /* Botones y enlaces */
 button, a {
@@ -49,10 +36,6 @@ a:hover {
 
 /* 📌 Ajustes Responsivos */
 @media (max-width: 768px) {
-    body {
-        font-size: 14px; /* Reduce el tamaño del texto */
-    }
-
     .nav-item {
         font-size: 12px;
         padding: 6px 10px;
@@ -68,14 +51,5 @@ a:hover {
         padding: 20px;
     }
 
-    button {
-        width: 100%;
-        max-width: 300px;
-    }
 
-    img {
-        width: 100%;
-        max-width: 600px;
-        height: auto;
-    }
 }

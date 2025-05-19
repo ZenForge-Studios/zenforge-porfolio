@@ -1,127 +1,109 @@
 ---
-import { Navbar } from "../components/Navbar";
-import Footer from '../components/Footer.astro';
+import Layout from '../layouts/Layout.astro';
 import { Icon } from 'astro-icon/components'; // 👈 Importación correcta
+import {Carousel} from '../components/Carousel';
+import {Testimonials} from '../components/Testimonials';
+
+const slides = [
+  [
+    { 
+      img: 'banner1.png', 
+      title: 'LegendX Network | Servidor', 
+      desc: 'Network de Minecraft dirigido a todo público. Modalidad principal: Legendary Skyblock basado en funciones de Hypixel Skyblock.', 
+      link: 'https://discord.gg/C4jRQJyWfZ' 
+    },
+    { 
+      img: 'bannermiby1.png', 
+      title: 'Miby | Discord Bot', 
+      desc: 'Bot multipropósito con sistemas dinámicos, comandos personalizados y funciones avanzadas para la gestión de servidores.', 
+      link: 'https://discord.com/oauth2/authorize?client_id=BOT_ID&scope=bot' 
+    }                                                                   
+  ],
+  [
+    { 
+      img: 'ecojobs.png', 
+      title: 'EcoPets Addon | Plugin', 
+      desc: 'Network de Minecraft dirigido a todo público. Modalidad principal: Legendary Skyblock basado en funciones de Hypixel Skyblock.', 
+      link: '#' 
+    },
+    { 
+      img: 'copets.png', 
+      title: 'ZFS EcoJobs | Config', 
+      desc: 'Configuración avanzada para trabajos, con funciones optimizadas y un mejor toque que lo estándar del complemento.', 
+      link: '#' 
+    }
+  ],
+  [
+    { 
+      img: 'tabscore.png', 
+      title: 'Tab & Score | Config', 
+      desc: 'ZFS Tab and Score Config ofrece una configuración completa para tabuladores y scoreboards, optimizada para personalización y funcionalidad.', 
+      link: '#' 
+    },
+    { 
+      img: 'bungee.png', 
+      title: 'ZFS Bungee | Setup', 
+      desc: 'ZFS Bungee Setup ofrece configuración avanzada para servidores Minecraft, garantizando estabilidad, personalización y rendimiento óptimo para redes multijugador.', 
+      link: '#'
+    }
+  ],
+  [
+    { 
+      img: 'kitec.png', 
+      title: 'Kit EldoriaCraft | Desing', 
+      desc: 'Este kit es lo que le proporcionamos a nuestros clientes al momento de contratar nuestro servicio de diseño, En este caso es un kit para el branding del servidor de EldoriaCraft.', 
+      link: '/kits/eldoriacraft.pdf' 
+    },
+    { 
+      img: 'kitzfs.png',
+      title: 'Kit ZenForge | Desing', 
+      desc: 'Este kit es lo que le proporcionamos a nuestros clientes al momento de contratar nuestro servicio de diseño. En este caso, es un kit para ZenForge', 
+      link: '/kits/zenforge.pdf'
+    }
+  ]
+];
+
+const reviewsPairs = [
+  [
+    {
+      img: "/Kryz.png",
+      name: "Kryz",
+      servicio: "Discord Server",
+      text: "La configuración y decoración de mi servidor de Discord fue increíble, fue rápido y se acomodó a mis peticiones junto con la creación de un logo tal y como quería, un excelente servicio.",
+      rating: "★★★★★",
+    },
+    {
+      img: "/Dacizco.png",
+      name: "Dacizco",
+      servicio: "Desarrollo",
+      text: "Buen servicio que hace cuacxdpe su estudio ZenForge es de calidad.",
+      rating: "★★★★★",
+    },
+  ],
+  [
+    {
+      img: "/lxicon.png",
+      name: "EnCraft",
+      servicio: "Diseño y Config",
+      text: "Los mejores precios en el mercado.",
+      rating: "★★★★☆",
+    },
+    {
+      img: "/ecicon.png",
+      name: "David García",
+      servicio: "Diseño y Config",
+      text: "Un equipo increíble, soluciones rápidas y una atención impecable.",
+      rating: "★★★★★",
+    },
+  ],
+];
 ---
-
-<!DOCTYPE html>
-<html lang="es">
-  <head>
-    <link rel="icon" href="/favicon.jpg" type="image/x-icon" />
-    <meta charset="UTF-8">
-    <title>ZenForge Studios - Proyectos</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" />
-    <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
-  </head>
-  <body class="bg-gray-900 text-white font-poppins">
-    <Navbar client:load/>
-
-<section class="container mx-auto px-6 sm:px-12 py-12">
-  <h2 class="text-2xl sm:text-3xl font-bold text-gray-300 text-center mb-6">Nuestros Proyectos</h2>
-  <div class="relative overflow-hidden mx-auto max-w-4xl" x-data="{ activeSlide: 0, slides: [
-    [
-      { img: 'banner1.png', title: 'LegendX Network | Servidor', desc: 'Network de Minecraft dirigido a todo público. Modalidad principal: Legendary Skyblock basado en funciones de Hypixel Skyblock.', link: 'https://discord.gg/C4jRQJyWfZ' },
-      { img: 'bannermiby1.png', title: 'Miby | Discord Bot', desc: 'Bot multipropósito con sistemas dinámicos, comandos personalizados y funciones avanzadas para la gestión de servidores.', link: 'https://discord.com/oauth2/authorize?client_id=BOT_ID&scope=bot' }
-    ],
-    [
-      { img: 'ecojobs.png', title: 'EcoPets Addon | Plugin', desc: 'Network de Minecraft dirigido a todo público. Modalidad principal: Legendary Skyblock basado en funciones de Hypixel Skyblock.', link: '#' },
-      { img: 'ecopets.png', title: 'ZFS EcoJobs | Config', desc: 'Configuración avanzada para trabajos, con funciones optimizadas y un mejor toque que lo estándar del complemento.', link: '#' }
-    ],
-    [
-      { img: 'tabscore.png', title: 'Tab & Score | Config', desc: 'ZFS Tab and Score Config ofrece una configuración completa para tabuladores y scoreboards, optimizada para personalización y funcionalidad.', link: '#' },
-      { img: 'bungee.png', title: 'ZFS Bungee | Setup', desc: 'ZFS Bungee Setup ofrece configuración avanzada para servidores Minecraft, garantizando estabilidad, personalización y rendimiento óptimo para redes multijugador.', link: '#' }
-    ],
-    [
-      { img: 'kitec.png', title: 'Kit EldoriaCraft | Desing', desc: 'Este kit es lo que le proporcionamos a nuestros clientes al momento de contratar nuestro servicio de diseño, En este caso es un kit para el branding del servidor de EldoriaCraft.', link: '/kits/eldoriacraft.pdf' },
-      { img: 'kitzfs.png', title: 'Kit ZenForge | Desing', desc: 'Este kit es lo que le proporcionamos a nuestros clientes al momento de contratar nuestro servicio de diseño. En este caso, es un kit para ZenForge', link: '/kits/zenforge.pdf'}
-    ]
-  ]}">
-
-    <div class="flex transition-transform duration-700 ease-in-out" :style="'transform: translateX(-' + activeSlide * 100 + '%)'">
-      <template x-for="(group, index) in slides" :key="index">
-        <div class="w-full flex flex-shrink-0 space-x-4">
-          <template x-for="slide in group">
-            <div class="w-1/2 text-center p-6 bg-gray-800 rounded-lg shadow-lg">
-              <img :src="slide.img" :alt="slide.title" class="w-full h-60 object-cover rounded-md mb-4" />
-              <h3 class="text-xl font-bold text-blue-400" x-text="slide.title"></h3>
-              <p class="mt-2 text-gray-300" x-text="slide.desc"></p>
-              <a :href="slide.link" class="mt-4 inline-flex items-center space-x-2 px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600 transition">
-                <Icon name="mdi:code-tags" class="w-6 h-6" />
-                <span>Inspeccionar</span>
-              </a>
-            </div>
-          </template>
-        </div>
-      </template>
-    </div>
-
-    <!-- Botones de navegación debajo del carrusel -->
-    <div class="flex justify-center mt-6 space-x-4">
-      <button @click="activeSlide = activeSlide === 0 ? slides.length - 1 : activeSlide - 1" 
-        class="bg-blue-500 px-4 py-2 rounded-full text-white hover:bg-blue-600 transition flex items-center space-x-2">
-        <Icon name="mdi:arrow-left-bold-circle" class="w-6 h-6" />
-        <span>Anterior</span>
-      </button>
-      
-      <button @click="activeSlide = activeSlide === slides.length - 1 ? 0 : activeSlide + 1" 
-        class="bg-blue-500 px-4 py-2 rounded-full text-white hover:bg-blue-600 transition flex items-center space-x-2">
-        <span>Siguiente</span>
-        <Icon name="mdi:arrow-right-bold-circle" class="w-6 h-6" />
-      </button>
-    </div>
-  </div>
-</section>
-
-    <!-- Sección de reseñas reincorporada -->
-<section class="container mx-auto px-6 sm:px-12 py-12">
-  <h2 class="text-3xl sm:text-3xl font-bold text-gray-300 text-center mb-6">Lo que dicen nuestros clientes</h2>
-  <div class="relative overflow-hidden max-w-4xl mx-auto" x-data="{ reviewIndex: 0, reviewsPairs: [
-    [{ img: '/Kryz.png', name: 'Kryz', servicio: 'Discord Server', text: 'La configuración y decoración de mi servidor de Discord fue increíble, fue rápido y se acomodó a mis peticiones junto con la creación de un logo tal y como quería, un excelente servicio.', rating: '★★★★★' },
-     { img: '/Dacizco.png', name: 'Dacizco', servicio: 'Desarrollo', text: 'Buen servicio que hace cuacxdpe su estudio ZenForge es de calidad.', rating: '★★★★★' }],
-    
-    [{ img: '/lxicon.png', name: 'EnCraft', servicio: 'Diseño y Config', text: 'Los mejores precios en el mercado.', rating: '★★★★☆' },
-     { img: '/ecicon.png', name: 'David García', servicio: 'Diseño y Config', text: 'Un equipo increíble, soluciones rápidas y una atención impecable.', rating: '★★★★★' }]
-  ]}">
-
-    <!-- Contenedor con carrusel en formato 2x2 -->
-    <div class="flex transition-transform duration-700 ease-in-out"
-         :style="'transform: translateX(calc(-' + reviewIndex * 100 + '%))'">
-      <template x-for="(reviewsGroup, index) in reviewsPairs" :key="index">
-        <div class="grid grid-cols-1 sm:grid-cols-2 gap-8 w-full flex-shrink-0 mx-auto p-6 bg-gray-800 rounded-lg shadow-lg text-center">
-          <template x-for="(review, subIndex) in reviewsGroup" :key="subIndex">
-            <div class="flex items-center p-4 bg-gray-900 rounded-lg shadow-md">
-              <img :src="review.img" :alt="review.name" class="w-16 h-16 rounded-full mr-4" />
-              <div class="flex flex-col flex-1 justify-between">
-                <h3 class="text-lg sm:text-xl font-bold text-blue-400" x-text="review.name"></h3>
-                <h4 class="text-sm text-gray-400 mb-2" x-text="'Servicio: ' + review.servicio"></h4>
-                <p class="text-gray-300 text-sm sm:text-base" x-text="review.text"></p>
-                <div class="mt-4 flex justify-center text-2xl">
-                  <span class="text-yellow-400 font-bold" x-text="review.rating"></span>
-                </div>
-              </div>
-            </div>
-          </template>
-        </div>
-      </template>
-    </div>
-
-    <!-- Botones de navegación para el carrusel -->
-    <div class="flex justify-center mt-6 space-x-4">
-      <button @click="reviewIndex = reviewIndex === 0 ? reviewsPairs.length - 1 : reviewIndex - 1" 
-        class="bg-blue-500 px-4 py-2 rounded-full text-white hover:bg-blue-600 transition flex items-center space-x-2">
-        <Icon name="mdi:arrow-left-bold-circle" class="w-6 h-6" />
-        <span>Anterior</span>
-      </button>
-      <button @click="reviewIndex = reviewIndex === reviewsPairs.length - 1 ? 0 : reviewIndex + 1" 
-        class="bg-blue-500 px-4 py-2 rounded-full text-white hover:bg-blue-600 transition flex items-center space-x-2">
-        <span>Siguiente</span>
-        <Icon name="mdi:arrow-right-bold-circle" class="w-6 h-6" />
-      </button>
-    </div>
-  </div>
-</section>
-
-    <Footer />
-  </body>
-</html>
+<Layout title="Portfolio">
+  <section class="Hero">
+    <h2 class="mb-6">Nuestro Portaforio</h2>
+    <h3 class="mb-6 sub">Nuestros Proyectos</h3>
+    <Carousel client:only="react" slides={slides}  />
+    <h3 class="my-6 sub">Lo que dicen nuestros clientes</h3>
+    <Testimonials Items={reviewsPairs}  client:only="react"/>
+  </section>
+</Layout>
