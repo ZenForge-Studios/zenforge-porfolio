@@ -1,74 +1,87 @@
 ---
 import Layout from "../layouts/Layout.astro"
+import {SectionServices } from "../components/SectionServices";
+import { Card } from "../components/Card";
 ---
 
 <Layout title="Servicios">
   <section class="Hero">
-    <h1 class="text-3xl sm:text-4xl font-bold text-center mb-8 text-blue-400">Nuestros Servicios</h1>
+    <h2 class="mb-8">Nuestros Servicios</h2>
   
-  <!-- Categorías de servicios -->
-  <section class="mb-16">
-    <h2 class="text-2xl sm:text-3xl font-bold text-blue-400 mb-6">Minecraft</h2>
-    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
-      <div class="bg-gray-800 p-6 rounded-lg shadow-lg hover:bg-gray-700 transition">
-        <img src="/en.png" alt="Minecraft Service 1" class="w-full h-40 sm:h-60 object-cover rounded-lg mb-4" />
-        <h4 class="text-lg sm:text-xl font-bold text-blue-400">Configuración de Servidores</h4>
-        <p class="text-gray-300 mt-2 text-sm sm:text-base">Servidores listos para competir con configuraciones avanzadas.</p>
-      </div>
-      <div class="bg-gray-800 p-6 rounded-lg shadow-lg hover:bg-gray-700 transition">
-        <img src="/en1.png" alt="Minecraft Service 2" class="w-full h-40 sm:h-60 object-cover rounded-lg mb-4" />
-        <h4 class="text-lg sm:text-xl font-bold text-blue-400">Construcción de Mapas</h4>
-        <p class="text-gray-300 mt-2 text-sm sm:text-base">Creamos lobbies y mapas únicos para modalidades de juego.</p>
-      </div>
-    </div>
-  </section>
+    <!-- Categorías de servicios -->
+    <SectionServices client:only="react" title="Minecraft" >
+      <Card 
+        title="Configuración de Servidores"
+        desc="Servidores listos para competir con configuraciones avanzadas."
+        src="/es.png"
+        OnlyButton={false}
+        client:only="react"
+      />
+      <Card 
+        title="Soporte Técnico"
+        desc="Asistencia y mantenimiento para servidores Minecraft."
+        src="/en.png"
+        OnlyButton={false}
+        client:only="react"
+      />
+      <Card 
+        title="Construcción de Mapas"
+        desc="Creamos lobbies y mapas únicos para modalidades de juego."
+        src="/en1.png"
+        OnlyButton={false}
+        client:only="react"
+      />
+    </SectionServices>
 
-  <section class="mb-16">
-    <h2 class="text-2xl sm:text-3xl font-bold text-blue-400 mb-6">Discord</h2>
-    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
-      <div class="bg-gray-800 p-6 rounded-lg shadow-lg hover:bg-gray-700 transition">
-        <img src="/es.png" alt="Discord Service 1" class="w-full h-40 sm:h-60 object-cover rounded-lg mb-4" />
-        <h4 class="text-lg sm:text-xl font-bold text-blue-400">Desarrollo de Bots</h4>
-        <p class="text-gray-300 mt-2 text-sm sm:text-base">Creamos bots personalizados para automatizar servidores de Discord.</p>
-      </div>
-      <div class="bg-gray-800 p-6 rounded-lg shadow-lg hover:bg-gray-700 transition">
-        <img src="/es1.png" alt="Discord Service 2" class="w-full h-40 sm:h-60 object-cover rounded-lg mb-4" />
-        <h4 class="text-lg sm:text-xl font-bold text-blue-400">Configuración de Servidores</h4>
-        <p class="text-gray-300 mt-2 text-sm sm:text-base">Organización profesional y herramientas para comunidades.</p>
-      </div>
-    </div>
-  </section>
+    <SectionServices client:only="react" title="Discord" >
+      <Card 
+        title="Desarrollo de Bots"
+        desc="Creamos bots personalizados para automatizar servidores de Discord."
+        src="/es.png"
+        OnlyButton={false}
+        client:only="react"
+      />
+      <Card 
+        title="Configuración de Servidores"
+        desc="Organización profesional y herramientas para comunidades."
+        src="/es1.png"
+        OnlyButton={false}
+        client:only="react"
+      />
+    </SectionServices>
 
-<section class="mb-16">
-  <h2 class="text-2xl sm:text-3xl font-bold text-blue-400 mb-6">Diseño Grafico</h2>
-  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
-    <div class="bg-gray-800 p-6 rounded-lg shadow-lg hover:bg-gray-700 transition">
-      <img src="/es.png" alt="Discord Service 1" class="w-full h-40 sm:h-60 object-cover rounded-lg mb-4" />
-      <h4 class="text-lg sm:text-xl font-bold text-blue-400">Creación de Logos</h4>
-      <p class="text-gray-300 mt-2 text-sm sm:text-base">Diseños únicos y personalizados para marcas y proyectos.</p>
-    </div>
-    <div class="bg-gray-800 p-6 rounded-lg shadow-lg hover:bg-gray-700 transition">
-      <img src="/es1.png" alt="Discord Service 2" class="w-full h-40 sm:h-60 object-cover rounded-lg mb-4" />
-      <h4 class="text-lg sm:text-xl font-bold text-blue-400">Renders 3D</h4>
-      <p class="text-gray-300 mt-2 text-sm sm:text-base">Visualizaciones tridimensionales de alta calidad.</p>
-    </div>
-  </div>
-</section>
+    <SectionServices client:only="react" title="Diseño Grafico" >
+      <Card 
+        title="Creación de Logos"
+        desc="Diseños únicos y personalizados para marcas y proyectos."
+        src="/es.png"
+        OnlyButton={false}
+        client:only="react"
+      />
+      <Card 
+        title="Renders 3D"
+        desc="Visualizaciones tridimensionales de alta calidad."
+        src="/es1.png"
+        OnlyButton={false}
+        client:only="react"
+      />
+    </SectionServices>
 
-  <section class="mb-16">
-    <h2 class="text-2xl sm:text-3xl font-bold text-blue-400 mb-6">Otros</h2>
-    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
-      <div class="bg-gray-800 p-6 rounded-lg shadow-lg hover:bg-gray-700 transition">
-        <img src="/es.png" alt="Other Service 1" class="w-full h-40 sm:h-60 object-cover rounded-lg mb-4" />
-        <h4 class="text-lg sm:text-xl font-bold text-blue-400">Desarrollo Web</h4>
-        <p class="text-gray-300 mt-2 text-sm sm:text-base">Creación de sitios web personalizados y optimizados.</p>
-      </div>
-      <div class="bg-gray-800 p-6 rounded-lg shadow-lg hover:bg-gray-700 transition">
-        <img src="/es1.png" alt="Other Service 2" class="w-full h-40 sm:h-60 object-cover rounded-lg mb-4" />
-        <h4 class="text-lg sm:text-xl font-bold text-blue-400">Consultoría Técnica</h4>
-        <p class="text-gray-300 mt-2 text-sm sm:text-base">Asesoría en proyectos tecnológicos y soluciones personalizadas.</p>
-      </div>
-    </div>
-  </section>
+    <SectionServices client:only="react" title="Otros" >
+      <Card 
+        title="Desarrollo Web"
+        desc="Creación de sitios web personalizados y optimizados."
+        src="/es.png"
+        OnlyButton={false}
+        client:only="react"
+      />
+      <Card 
+        title="Consultoría Técnica"
+        desc="Asesoría en proyectos tecnológicos y soluciones personalizadas."
+        src="/es1.png"
+        OnlyButton={false}
+        client:only="react"
+      />
+    </SectionServices>
   </section>
 </Layout>

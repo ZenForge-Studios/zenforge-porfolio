@@ -42,6 +42,7 @@ export const Card = ({
   desc = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque aliquid laborum ducimus exercitationem quidem qui est quo ipsum veritatis, magnam itaque quia excepturi nesciunt architecto, atque reprehenderit nihil mollitia cumque?",
   button = "Click",
   href = "#",
+  OnlyButton = true,
   onClick = () => {console.log("Click en el boton");},
 }) => {
 
@@ -51,10 +52,11 @@ export const Card = ({
       <img src={src} alt={alt} />
       <h4>{title}</h4>
       <p>{desc}</p>
-      <Button standOut={true} href={href} onClick={onClick}>
-        {button}
-      </Button>
-
+      {OnlyButton &&      
+        <Button standOut={true} href={href} onClick={onClick}>
+          {button}
+        </Button>
+      }
     </Container>
   );
 }
