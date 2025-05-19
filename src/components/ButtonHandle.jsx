@@ -26,12 +26,13 @@ const Container = styled.button`//* ------ [ Styled - Link de botones ]:
   font-weight: 600; /* Equivalente a font-semibold */
   text-decoration: none;
   //Animacion
-  transition: background-color 0.3s ease-in-out;
+  transition: background-color 0.3s ease-in-out, transform 0.2s cubic-bezier(0.4,0,0.2,1);
   &:hover {
     background: ${({ standOut }) => standOut
       ? "linear-gradient(90deg, #3B82F6, #214b98)"
       : 'linear-gradient(90deg, #6b7280, #4b5563)'
     };
+    transform: scale(1.06);
   }
 `;
 //#endregion

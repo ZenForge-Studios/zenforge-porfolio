@@ -31,6 +31,12 @@ const Container = styled.article`
     object-fit: fill;
     border-radius: .75rem;
   }
+
+    transition: transform 0.2s cubic-bezier(0.4,0,0.2,1);
+  &:hover {
+    transform: scale(1.04);
+  }
+
 `
 
 //#endregion
