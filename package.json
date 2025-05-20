@@ -19,6 +19,7 @@
     "astro-i18next": "^1.0.0-beta.21",
     "astro-icon": "^1.1.5",
     "firebase": "^11.7.1",
+    "styled-components": "^6.1.18",
     "tsparticles": "^3.8.1",
     "zenforge-portfolio": "file:"
   }
