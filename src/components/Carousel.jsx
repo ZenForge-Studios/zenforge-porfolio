@@ -32,6 +32,9 @@ const ItemsWrapper = styled.div`
   article {
     width: 50%;
     min-width: 0;
+    @media (max-width: 920px) {
+      width: 100%;
+    }
   }
 `;
 
@@ -48,8 +51,28 @@ const Controls = styled.div`
 
 export const Carousel = ({ slides }) => {
   const [activeIndex, setActiveIndex] = useState(0);
+  const [cardsPerSlide, setCardsPerSlide] = useState(window.innerWidth <= 920 ? 1 : 2);
 
-  const totalGroups = slides.length;
+  // Update cardsPerSlide on resize
+  // and recalculate activeIndex if needed
+  // (optional: debounce for performance)
+  // Clean up listener on unmount
+  // eslint-disable-next-line
+  useState(() => {
+    const handleResize = () => {
+      setCardsPerSlide(window.innerWidth <= 920 ? 1 : 2);
+    };
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
+  // Flatten slides and group by cardsPerSlide
+  const flatSlides = slides.flat();
+  const groupedSlides = [];
+  for (let i = 0; i < flatSlides.length; i += cardsPerSlide) {
+    groupedSlides.push(flatSlides.slice(i, i + cardsPerSlide));
+  }
+  const totalGroups = groupedSlides.length;
 
   const prev = () =>
     setActiveIndex((prev) => (prev === 0 ? totalGroups - 1 : prev - 1));
@@ -59,7 +82,7 @@ export const Carousel = ({ slides }) => {
   return (
     <Container>
       <CarouselInner reviewIndex={activeIndex}>
-        {slides.map((group, idx) => (
+        {groupedSlides.map((group, idx) => (
           <ItemsWrapper key={idx}>
             {group.map((item, subIdx) => (
               <Card

@@ -1,6 +1,6 @@
 ---
 import Layout from "../layouts/Layout.astro"
-import {SectionServices } from "../components/SectionServices";
+import {SectionCard } from "../components/SectionCard";
 import { Card } from "../components/Card";
 ---
 
@@ -9,7 +9,7 @@ import { Card } from "../components/Card";
     <h2 class="mb-8">Nuestros Servicios</h2>
   
     <!-- Categorías de servicios -->
-    <SectionServices client:only="react" title="Minecraft" >
+    <SectionCard client:only="react" title="Minecraft" >
       <Card 
         title="Configuración de Servidores"
         desc="Servidores listos para competir con configuraciones avanzadas."
@@ -31,9 +31,9 @@ import { Card } from "../components/Card";
         OnlyButton={false}
         client:only="react"
       />
-    </SectionServices>
+    </SectionCard>
 
-    <SectionServices client:only="react" title="Discord" >
+    <SectionCard client:only="react" title="Discord" >
       <Card 
         title="Desarrollo de Bots"
         desc="Creamos bots personalizados para automatizar servidores de Discord."
@@ -48,9 +48,9 @@ import { Card } from "../components/Card";
         OnlyButton={false}
         client:only="react"
       />
-    </SectionServices>
+    </SectionCard>
 
-    <SectionServices client:only="react" title="Diseño Grafico" >
+    <SectionCard client:only="react" title="Diseño Grafico" >
       <Card 
         title="Creación de Logos"
         desc="Diseños únicos y personalizados para marcas y proyectos."
@@ -65,9 +65,9 @@ import { Card } from "../components/Card";
         OnlyButton={false}
         client:only="react"
       />
-    </SectionServices>
+    </SectionCard>
 
-    <SectionServices client:only="react" title="Otros" >
+    <SectionCard client:only="react" title="Otros" >
       <Card 
         title="Desarrollo Web"
         desc="Creación de sitios web personalizados y optimizados."
@@ -82,6 +82,6 @@ import { Card } from "../components/Card";
         OnlyButton={false}
         client:only="react"
       />
-    </SectionServices>
+    </SectionCard>
   </section>
 </Layout>

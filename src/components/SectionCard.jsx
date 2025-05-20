@@ -11,22 +11,35 @@ const Container = styled.a`//* ------ [ Styled - Link de botones ]:
   flex-direction: column;
   gap: 1rem; 
   margin-bottom: 1rem;
-  margin:1rem;
-  
+  margin: 1rem;
+
   div{ 
     display: flex;
+    justify-content: center;
+    align-items: center;
     flex-direction: row;
-    gap: 1rem;
-    max-height: 500px;
+    gap: 2rem;
+    flex-wrap: wrap;
 
     article{
-      max-width: 500px;
+      max-height: 450px;
+      
+    }
+
+    @media (max-width: 920px) {
+      flex-direction: column;
+      article{
+        max-width: 350px;
+      }
     }
   }
 `;
+
+
+
 //#endregion
 //#region ------------------------ [ Componentes ] ------------------------;
-export const SectionServices = ({children, title, className = ""}) => {
+export const SectionCard = ({children, title = "", className = ""}) => {
   //* ------ [ HTML ] ------:
   return(
     <Container className={className} > 

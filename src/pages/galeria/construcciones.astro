@@ -1,35 +1,42 @@
 ---
 import Layout from "../../layouts/Layout.astro"
+import { Card } from "../../components/Card"
+import { SectionCard } from "../../components/SectionCard";
+
+const cards = [
+  {
+    title: "Diseño 1",
+    desc: "Descripción breve sobre este diseño.",
+    src: "/design1.jpg"
+  },
+  {
+    title: "Diseño 2",
+    desc: "Descripción breve sobre este diseño.",
+    src: "/design2.jpg"
+  },
+  {
+    title: "Diseño 3",
+    desc: "Descripción breve sobre este diseño.",
+    src: "/design3.jpg"
+  }
+  //Aququi pqueden agregar más objetos según sea necesario
+];
 ---
 <Layout title="Diseños">
   <!-- Sección de Diseños -->
   <section class="Hero">
-    <h1 class="text-3xl sm:text-4xl font-bold text-center mb-8 text-white">Galería de Diseños</h1>
-
-      <!-- Grid de imágenes -->
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
-        <div class="bg-[#1E1E1E] rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition">
-          <img src="/design1.jpg" alt="Diseño 1" class="w-full h-48 sm:h-60 object-cover" />
-          <div class="p-4">
-            <h4 class="text-lg sm:text-xl font-bold text-[#E5E5E5]">Diseño 1</h4>
-            <p class="text-[#CCCCCC] mt-2 text-sm sm:text-base">Descripción breve sobre este diseño.</p>
-          </div>
-        </div>
-        <div class="bg-[#1E1E1E] rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition">
-          <img src="/design2.jpg" alt="Diseño 2" class="w-full h-48 sm:h-60 object-cover" />
-          <div class="p-4">
-            <h4 class="text-lg sm:text-xl font-bold text-[#E5E5E5]">Diseño 2</h4>
-            <p class="text-[#CCCCCC] mt-2 text-sm sm:text-base">Descripción breve sobre este diseño.</p>
-          </div>
-        </div>
-        <div class="bg-[#1E1E1E] rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition">
-          <img src="/design3.jpg" alt="Diseño 3" class="w-full h-48 sm:h-60 object-cover" />
-          <div class="p-4">
-            <h4 class="text-lg sm:text-xl font-bold text-[#E5E5E5]">Diseño 3</h4>
-            <p class="text-[#CCCCCC] mt-2 text-sm sm:text-base">Descripción breve sobre este diseño.</p>
-          </div>
-        </div>
-        <!-- Agregar más imágenes según sea necesario -->
-      </div>
+    <h2 class="mb-8">Galería de Diseños</h2>
+    <!-- Grid de imágenes -->
+    <SectionCard client:only="react">
+      {cards.map((item) => (
+          <Card
+            title={item.title}
+            desc={item.desc}
+            src={item.src}
+            OnlyButton={false}
+            client:only="react"
+          />
+        ))}
+    </SectionCard>
   </section>
 </Layout>
