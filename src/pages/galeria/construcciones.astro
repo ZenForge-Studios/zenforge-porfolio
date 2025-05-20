@@ -1,5 +1,6 @@
 ---
 import Navbar from '../../components/Navbar.astro';
+import {Header} from '../../components/Header/Header';
 import Footer from '../../components/Footer.astro';
 ---
 
@@ -13,7 +14,7 @@ import Footer from '../../components/Footer.astro';
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" />
   </head>
   <body class="bg-[#000000] text-white font-poppins">
-    <Navbar />
+    <Header client:load/>
 
     <main class="container mx-auto px-6 sm:px-12 py-12">
       <h1 class="text-3xl sm:text-4xl font-bold text-center mb-8 text-white">Galería de Diseños</h1>
@@ -23,21 +24,21 @@ import Footer from '../../components/Footer.astro';
         <div class="bg-[#1E1E1E] rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition">
           <img src="/design1.jpg" alt="Diseño 1" class="w-full h-48 sm:h-60 object-cover" />
           <div class="p-4">
-            <h3 class="text-lg sm:text-xl font-bold text-[#E5E5E5]">Diseño 1</h3>
+            <h4 class="text-lg sm:text-xl font-bold text-[#E5E5E5]">Diseño 1</h4>
             <p class="text-[#CCCCCC] mt-2 text-sm sm:text-base">Descripción breve sobre este diseño.</p>
           </div>
         </div>
         <div class="bg-[#1E1E1E] rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition">
           <img src="/design2.jpg" alt="Diseño 2" class="w-full h-48 sm:h-60 object-cover" />
           <div class="p-4">
-            <h3 class="text-lg sm:text-xl font-bold text-[#E5E5E5]">Diseño 2</h3>
+            <h4 class="text-lg sm:text-xl font-bold text-[#E5E5E5]">Diseño 2</h4>
             <p class="text-[#CCCCCC] mt-2 text-sm sm:text-base">Descripción breve sobre este diseño.</p>
           </div>
         </div>
         <div class="bg-[#1E1E1E] rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition">
           <img src="/design3.jpg" alt="Diseño 3" class="w-full h-48 sm:h-60 object-cover" />
           <div class="p-4">
-            <h3 class="text-lg sm:text-xl font-bold text-[#E5E5E5]">Diseño 3</h3>
+            <h4 class="text-lg sm:text-xl font-bold text-[#E5E5E5]">Diseño 3</h4>
             <p class="text-[#CCCCCC] mt-2 text-sm sm:text-base">Descripción breve sobre este diseño.</p>
           </div>
         </div>

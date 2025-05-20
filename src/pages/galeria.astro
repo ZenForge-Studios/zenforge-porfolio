@@ -1,34 +1,20 @@
 ---
-import Navbar from '../components/Navbar.astro';
-import Footer from '../components/Footer.astro';
+import Layout from "../layouts/Layout.astro"
+import { Button } from "../components/Button";
 ---
 
-<!DOCTYPE html>
-<html lang="es">
-  <head>
-    <link rel="icon" href="/favicon.jpg" type="image/x-icon" />
-    <meta charset="UTF-8">
-    <title>ZenForge Studios - Galería</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" />
-  </head>
-  <body class="bg-gray-900 text-white font-poppins">
-    <Navbar />
+<Layout title="Galería">
+  <section class="Hero">
+    <h2 class="mb-6">Galería</h2>
 
-    <!-- Categorías de Galería -->
-    <main class="container mx-auto px-6 sm:px-12 py-12">
-      <h1 class="text-4xl sm:text-5xl font-bold text-center mb-6 text-blue-400">Galería</h1>
-
-      <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
-        <a href="/galeria/construcciones" class="bg-gray-700 p-6 sm:p-8 rounded-lg shadow hover:bg-gray-600 transition text-center">
-          <h2 class="text-2xl sm:text-3xl font-bold text-blue-400">Construcciones</h2>
-        </a>
-        <a href="/galeria/diseños" class="bg-gray-700 p-6 sm:p-8 rounded-lg shadow hover:bg-gray-600 transition text-center">
-          <h2 class="text-2xl sm:text-3xl font-bold text-blue-400">Diseños</h2>
-        </a>
-      </div>
-    </main>
-
-    <Footer />
-  </body>
-</html>
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 w-full max-w-[40vw] mx-auto">
+      <Button href="/galeria/construcciones" client:only="react"  standOut={false}>
+        Construcciones
+      </Button>
+      <Button href="/galeria/diseños" client:only="react"  standOut={false}>
+        Diseños
+      </Button>
+      </a>
+    </div>
+  </section>
+</Layout>
