@@ -27,7 +27,6 @@ export const Header = () => {
   const NavButtons = [
     {href: '/cotizar',      /*icon: <Icon icon="mdi:fire" className="w-5 h-5" />,*/                 label: 'Cotiza Ahora', standOut: true },  
     {href: '/en/portfolio', /*icon: <Icon icon="ph:globe-hemisphere-west" className="w-5 h-5" />,*/ label: 'Portfolio EN', standOut: false }, 
-    {href: '#',             /*icon: <Icon icon="mdi:key" className="w-5 h-5" />,*/                  label: 'Acceder', standOut: false}, 
   ]; //! ⚠️ Importación Fallida ⚠️
   //* ------ [ Control del estado del Menu] ------:
   const [isMenuOpen, setMenuOpen] = React.useState(false);

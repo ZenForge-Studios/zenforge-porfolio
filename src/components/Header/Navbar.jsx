@@ -2,6 +2,8 @@
 import React from "react";
 import {styled} from "styled-components";
 import {Button} from "../Button";
+import { ButtonHandle } from "../ButtonHandle";
+import { Modal } from "../Modal";
 /*import {Icon}  from "astro-icon/components";*/ //! ⚠️ Importación Fallida ⚠️
 //#endregion
 //#region ------------------------ [ Styled ] ------------------------;
@@ -130,6 +132,9 @@ export const Navbar = ({
   isMenuOpen,
   toggleMenu = () => {console.log("No se ha definido la funcion toggleMenu")} 
 }) => {
+
+  const [modalOpen, setModalOpen] = React.useState(false);
+
   //* ------ [ HTML ] ------:
   return(
     <Container>
@@ -160,10 +165,19 @@ export const Navbar = ({
             href={href}
             standOut={standOut}
           >
-            {/* {icon} //! ⚠️ Importación Fallida ⚠️ */ }
-            {label}
+          {/* {icon} //! ⚠️ Importación Fallida ⚠️ */}
+          {label}
           </Button>
         ))}
+        <ButtonHandle
+          standOut = {false}
+          onClick={() => setModalOpen(true)}
+        >
+          Acceder
+        </ButtonHandle>
+        {modalOpen && (
+          <Modal> Modal </Modal>
+        )}
       </NavButtons>
     </Container>
   );

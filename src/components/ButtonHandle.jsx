@@ -37,10 +37,16 @@ const Container = styled.button`//* ------ [ Styled - Link de botones ]:
 `;
 //#endregion
 //#region ------------------------ [ Componentes ] ------------------------;
-export const ButtonHandle = ({children, standOut, onClick, className = ""}) => {
+export const ButtonHandle = ({
+  children, 
+  standOut, 
+  onClick, 
+  className = "", 
+  type = "button"
+}) => {
   //* ------ [ HTML ] ------:
   return(
-    <Container onClick={onClick} standOut={standOut} className={className} > 
+    <Container type={type} onClick={onClick} standOut={standOut} className={className} > 
       {children}
     </Container>
   );
