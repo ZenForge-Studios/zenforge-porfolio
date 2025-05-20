@@ -1,23 +1,10 @@
 ---
-import Navbar from '../../components/Navbar.astro';
-import {Header} from '../../components/Header/Header';
-import Footer from '../../components/Footer.astro';
+import Layout from "../../layouts/Layout.astro"
 ---
-
-<!DOCTYPE html>
-<html lang="es">
-  <head>
-    <link rel="icon" href="/favicon.jpg" type="image/x-icon" />
-    <meta charset="UTF-8">
-    <title>ZenForge Studios - Diseños</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" />
-  </head>
-  <body class="bg-[#000000] text-white font-poppins">
-    <Header client:load/>
-
-    <main class="container mx-auto px-6 sm:px-12 py-12">
-      <h1 class="text-3xl sm:text-4xl font-bold text-center mb-8 text-white">Galería de Diseños</h1>
+<Layout title="Diseños">
+  <!-- Sección de Diseños -->
+  <section class="Hero">
+    <h1 class="text-3xl sm:text-4xl font-bold text-center mb-8 text-white">Galería de Diseños</h1>
 
       <!-- Grid de imágenes -->
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
@@ -44,8 +31,5 @@ import Footer from '../../components/Footer.astro';
         </div>
         <!-- Agregar más imágenes según sea necesario -->
       </div>
-    </main>
-
-    <Footer />
-  </body>
-</html>
+  </section>
+</Layout>
