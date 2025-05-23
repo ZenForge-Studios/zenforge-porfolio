@@ -16,13 +16,17 @@ export const GlobalStyles = createGlobalStyle`
     min-height: 100vh;
     font-family: 'Poppins', sans-serif;
     color: whitesmoke;
-    background-color: #111827;
+    /* Fondo con degradado y una elipse/círculo al final */
+    background: 
+      radial-gradient(ellipse at bottom center, rgba(59,130,246,0.25) 0%, transparent 70%),
+      linear-gradient(180deg, #111827 70%, rgba(59,130,246,0.25) 500%);
   }
   main {
     display: flex;
     justify-content: space-between;
+    align-items: stretch;
+    align-self: center;
     flex-direction: column;
-    flex-grow: 1;
     min-height: 100vh;
   }
   .Hero {
@@ -30,7 +34,7 @@ export const GlobalStyles = createGlobalStyle`
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    flex-grow: 1;
+    flex-grow: 10;
     gap: 1rem;
     padding: 4rem 2rem 1rem 2rem;
     text-align: center;

@@ -5,10 +5,12 @@ import { LoadingScreen } from "./LoadingScreen";
 
 export const AppShell = ({ children }) => {
   return (
+    <main>
     <Suspense fallback={<LoadingScreen />}>
       <GlobalStyles />
       <Header />
       {children}
     </Suspense>
+    </main>
   );
 };
