@@ -51,6 +51,17 @@ export const GlobalStyles = createGlobalStyle`
   p {
     font-size: clamp(1rem, 2vw, 1.125rem);
   }
+  
+  a.only {
+    background: linear-gradient(90deg, #68b8ee,  #3B82F6);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    cursor: pointer;
+    &:focus, &:hover {
+      background: linear-gradient(90deg, #3B82F6, #214b98);
+      background-clip: text;
+    }
+  }
 
   h1, h2, h3, h4 {
     font-weight: bold; 

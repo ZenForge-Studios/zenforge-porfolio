@@ -13,13 +13,18 @@ const Overlay = styled.div`
 `;
 
 const ModalContainer = styled.div`
-  background: #374151;
-  padding: 2rem;
-  border-radius: 8px;
+  // Disposcion:
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
   min-width: 300px;
   max-width: 90vw;
+  padding: 2rem;
+   // Diseño:
+  background: #374151;
+  border-radius: 8px;
   box-shadow: 0 2px 16px rgba(0,0,0,0.2);
-  position: relative;
 `;
 
 const CloseButton = styled.button`

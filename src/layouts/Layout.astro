@@ -1,12 +1,8 @@
 ---
-import React from 'react';
-import { Header } from "../components/Header/Header";
+import {AppShell} from '../components/Loanding/AppShell';
 import Footer from '../components/Footer.astro';
-import { GlobalStyles } from "../styles/GlobalStyles";
-// Props de Astro, como `title`
 const { title = "Mi Sitio Web" } = Astro.props;
 ---
-
 <!DOCTYPE html>
 <html lang="es">
   <head>
@@ -18,13 +14,9 @@ const { title = "Mi Sitio Web" } = Astro.props;
     <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
   </head>
   <body>
-    <React.StrictMode>
-      <GlobalStyles client:only="react"/>
-      <main>
-        <Header client:only="react"/>
-        <slot />
-        <Footer />
-      </main>
-    </React.StrictMode>
+    <AppShell client:only="react">
+      <slot />
+      <Footer />
+    </AppShell>
   </body>
 </html>

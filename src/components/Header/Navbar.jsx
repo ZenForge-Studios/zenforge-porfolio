@@ -4,6 +4,7 @@ import {styled} from "styled-components";
 import {Button} from "../Button";
 import { ButtonHandle } from "../ButtonHandle";
 import { Modal } from "../Modal";
+import { AccessForm } from "../Form/AccessForm";
 /*import {Icon}  from "astro-icon/components";*/ //! ⚠️ Importación Fallida ⚠️
 //#endregion
 //#region ------------------------ [ Styled ] ------------------------;
@@ -176,7 +177,9 @@ export const Navbar = ({
           Acceder
         </ButtonHandle>
         {modalOpen && (
-          <Modal> Modal </Modal>
+          <Modal> 
+            <AccessForm />
+          </Modal>
         )}
       </NavButtons>
     </Container>
