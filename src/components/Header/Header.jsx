@@ -8,9 +8,14 @@ import { Navbar } from "./Navbar";
 //#endregion
 //#region ------------------------ [ Styled ] ------------------------;
 const Container = styled.header` //* ------ [ Styled - Navegador ]:
+  position: sticky;
+  top: 0;
+  z-index: 1000;
   display: flex;
   flex-direction: column;
   gap: 1rem;
+  background: ${({ scrolled }) => (scrolled ? "#111827" : "transparent")};
+  transition: background 0.1s;
 `;
 //#endregion 
 //#region ------------------------ [ Componentes ] ------------------------;
@@ -33,13 +38,25 @@ export const Header = () => {
   const toggleMenu = () => {
     setMenuOpen(!isMenuOpen);
   };
+
+  //* ------ [ Estado para scrolled ] ------:
+  const [scrolled, setScrolled] = React.useState(false);
+
+  React.useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 0);
+    };
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
   //* ------ [ HTML ] ------:
   return(
-    <Container>
+    <Container scrolled={scrolled}>
       <Promotion />
       <Navbar Items={navItems} buttonData={NavButtons} isMenuOpen={isMenuOpen} toggleMenu={toggleMenu}/>
       <DropdownMenu Items={navItems} isOp={isMenuOpen} toggleMenu={toggleMenu}/>
     </Container>
   );
-  }
+}
 //#endregion

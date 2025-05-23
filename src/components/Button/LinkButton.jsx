@@ -11,9 +11,11 @@ export const LinkButton = ({
 }) => {
   //* ------ [ HTML ] ------:
   return(
-    <ButtonStylesProvider href={href} standOut={standOut} className={className} > 
-      {children}
+    <ButtonStylesProvider  standOut={standOut} className={className} > 
+      <a href={href}>
+        {children}
+      </a>
     </ButtonStylesProvider>
   );
-  }
+}
 //#endregion

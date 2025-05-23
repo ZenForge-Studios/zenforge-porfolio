@@ -12,8 +12,10 @@ export const ActionButton = ({
 }) => {
   //* ------ [ HTML ] ------:
   return(
-    <ButtonStylesProvider type={type} onClick={onClick} standOut={standOut} className={className} > 
-      {children}
+    <ButtonStylesProvider standOut={standOut} className={className} > 
+      <button type={type} onClick={onClick}>
+        {children}
+      </button>
     </ButtonStylesProvider>
   );
   }

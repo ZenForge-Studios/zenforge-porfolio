@@ -10,7 +10,7 @@ const Container = styled.section`//* ------ [ Styled - Contenedor Principal ]:
   justify-content: center;
   align-items: center;
 `;
-const CarouselWrapper = styled.div`//* ------ [ Styled - Carrusel ]:
+const CarouselWrapper = styled.div`//* ------ [ Styled -  Carrusel ]:
   // Disposition: 
   position: relative;
   display: flex;
@@ -21,6 +21,7 @@ const CarouselWrapper = styled.div`//* ------ [ Styled - Carrusel ]:
   // Diseño: 
   max-width: 64rem;
   overflow: hidden;
+  padding-bottom: 2rem;
 `;
 const CarouselInner = styled.div`//* ------ [ Styled - Anima Carrusel ]:
   display: flex;
@@ -81,7 +82,7 @@ const Control = styled.div` //* ------ [ Styled - Controles ]:
   justify-content: center;
   margin-top: 1.5rem;
   gap: 1rem;
-  button{
+  div.button{
     border-radius: 4rem;
   }
 `;
@@ -129,10 +130,10 @@ export const Testimonials = ({Items}) => {
         </CarouselInner>
         {/* Botones de navegación del carrusel */}
         <Control>
-          <ActionButton  standOut={true} onClick={prev}>
+          <ActionButton standOut={true} onClick={prev} className="button">
             {/* <MdArrowLeft size={24} />*/} Anterior
           </ActionButton>
-          <ActionButton standOut={true} onClick={next}>
+          <ActionButton standOut={true} onClick={next} className="button">
             Siguiente{/*<MdArrowRight size={24} /> */}
           </ActionButton>
         </Control>

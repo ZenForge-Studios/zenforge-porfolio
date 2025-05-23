@@ -12,14 +12,16 @@ const Container = styled.article`
   flex-direction: column;
   flex-grow: 1;
   gap: 1rem;
-  padding: 24px;
+  padding: 1.5rem;
   // Diseño:
   width: auto;
   min-width: 50px;
   aspect-ratio: 0.9 / 1; 
   background-color: #1A202C;
   border-radius: .5rem;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.15);
 
+  // ELementos Hijos
   p{
     display: flex;
     flex-grow: 100;
@@ -32,9 +34,10 @@ const Container = styled.article`
     border-radius: .75rem;
   }
 
-    transition: transform 0.2s cubic-bezier(0.4,0,0.2,1);
+  // Animacion
+  transition: transform 0.2s cubic-bezier(0.4,0,0.2,1);
   &:hover {
-    transform: scale(1.04);
+    transform: scale(1.03);
   }
 
 `

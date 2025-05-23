@@ -2,14 +2,12 @@
 import {styled} from "styled-components";
 //#endregion
 //#region ------------------------ [ Styled ] ------------------------;
-export const ButtonStylesProvider = styled.a`//* ------ [ Styled - Contenedor principal ]: 
+export const ButtonStylesProvider = styled.div`//* ------ [ Styled - Contenedor principal ]: 
   // Disposicion:
   display: flex;
-  justify-content: center;
-  align-items: center;
+  justify-content: stretch;
+  align-items: stretch;
   flex-grow: 1;
-  gap: 0.5rem; 
-  padding: 12px 24px;
   // Diseño:
   cursor: pointer;
   border-radius: .5rem; 
@@ -21,8 +19,7 @@ export const ButtonStylesProvider = styled.a`//* ------ [ Styled - Contenedor pr
   background-position: 100%; 
   background-size: 200%;
   // Texto:
-  font-weight: 600; 
-  text-decoration: none;
+  font-weight: bold; 
   // Animacion:
   transition: background .05s cubic-bezier(0.4,0,0.2,1), 
               transform .05s cubic-bezier(0.4,0,0.2,1), 
@@ -41,6 +38,17 @@ export const ButtonStylesProvider = styled.a`//* ------ [ Styled - Contenedor pr
         ? "drop-shadow(0 0 6px #3B82F6) brightness(1.05)"
         : "drop-shadow(0 0 6px #4b5563) brightness(1.05)"
     };
+  }
+
+  // Elementos hijos:
+  button, a{
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    min-height: 100%;
+    min-width: 100%;
+    gap: 0.5rem; 
+    padding: 12px 24px;
   }
 `;
 //#endregion
