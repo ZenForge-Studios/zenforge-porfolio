@@ -1,6 +1,6 @@
 ---
 import Layout from "../layouts/Layout.astro"
-import { Button } from "../components/Button";
+import { LinkButton } from "../components/Button/LinkButton";
 ---
 
 <Layout title="Galería">
@@ -8,12 +8,12 @@ import { Button } from "../components/Button";
     <h2 class="mb-6">Galería</h2>
 
     <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 w-full max-w-[40vw] mx-auto">
-      <Button href="/galeria/construcciones" client:only="react"  standOut={false}>
+      <LinkButton href="/galeria/construcciones" client:only="react"  standOut={false}>
         Construcciones
-      </Button>
-      <Button href="/galeria/diseños" client:only="react"  standOut={false}>
+      </LinkButton>
+      <LinkButton href="/galeria/diseños" client:only="react"  standOut={false}>
         Diseños
-      </Button>
+      </LinkButton>
       </a>
     </div>
   </section>

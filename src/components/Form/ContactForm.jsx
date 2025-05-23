@@ -2,7 +2,7 @@
 import React from "react";
 import styled from "styled-components";
 import { FloatingLabelInput } from "./FloatingLabelInput"; 
-import { ButtonHandle } from "../ButtonHandle";  
+import { ActionButton } from "../Button/ActionButton";  
 //#endregion
 //#region ------------------------ [ Styled ] ------------------------;
 // Formulario
@@ -69,7 +69,7 @@ export const ContactForm = () => (
       required
     />
     <TextArea name="message" placeholder="Tu mensaje" required />
-    <ButtonHandle standOut={true} type="submit">Enviar</ButtonHandle>
+    <ActionButton standOut={true} type="submit">Enviar</ActionButton>
   </Container>
 );
 //#endregion

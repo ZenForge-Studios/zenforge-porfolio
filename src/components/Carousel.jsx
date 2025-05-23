@@ -1,7 +1,7 @@
 import { useState } from "react";
 import styled from "styled-components";
 import { Card } from "./Card";
-import { ButtonHandle } from "./ButtonHandle";
+import { ActionButton } from "./Button/ActionButton";
 
 const Container = styled.div`
   position: relative;
@@ -98,8 +98,8 @@ export const Carousel = ({ slides }) => {
         ))}
       </CarouselInner>
       <Controls>
-        <ButtonHandle standOut={true} onClick={prev}>Anterior</ButtonHandle>
-        <ButtonHandle standOut={true} onClick={next}>Siguiente</ButtonHandle>
+        <ActionButton standOut={true} onClick={prev}>Anterior</ActionButton>
+        <ActionButton standOut={true} onClick={next}>Siguiente</ActionButton>
       </Controls>
     </Container>
   );

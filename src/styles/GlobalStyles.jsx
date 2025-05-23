@@ -53,7 +53,7 @@ export const GlobalStyles = createGlobalStyle`
     font-size: clamp(1.2rem, 2vw, 1.5rem);
   }
   p {
-    font-size: clamp(1rem, 2vw, 1.125rem);
+    font-size: clamp(.8rem, 1.8vw, 1.125rem);
   }
   
   a.only {

@@ -1,7 +1,7 @@
 //#region ------------------------ [ Biblioteca ] ------------------------;
 import React from "react";
 import {styled} from "styled-components";
-import { Button } from "./Button";
+import { LinkButton } from "./Button/LinkButton";
 //#endregion
 //#region ------------------------ [ Styled ] ------------------------;
 const Container = styled.article`
@@ -59,9 +59,9 @@ export const Card = ({
       <h4>{title}</h4>
       <p>{desc}</p>
       {OnlyButton &&      
-        <Button standOut={true} href={href} onClick={onClick}>
+        <LinkButton standOut={true} href={href} onClick={onClick}>
           {button}
-        </Button>
+        </LinkButton>
       }
     </Container>
   );

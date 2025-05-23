@@ -1,7 +1,7 @@
 //#region ------------------------ [ Biblioteca ] ------------------------;
 import React, { useState } from "react";
 import {styled} from "styled-components";
-import { ButtonHandle } from "./ButtonHandle";
+import { ActionButton } from "./Button/ActionButton";
 // import { MdArrowLeft, MdArrowRight } from "react-icons/md";
 //#endregion
 //#region ------------------------ [ Styled ] ------------------------;
@@ -129,12 +129,12 @@ export const Testimonials = ({Items}) => {
         </CarouselInner>
         {/* Botones de navegación del carrusel */}
         <Control>
-          <ButtonHandle  standOut={true} onClick={prev}>
+          <ActionButton  standOut={true} onClick={prev}>
             {/* <MdArrowLeft size={24} />*/} Anterior
-          </ButtonHandle>
-          <ButtonHandle standOut={true} onClick={next}>
+          </ActionButton>
+          <ActionButton standOut={true} onClick={next}>
             Siguiente{/*<MdArrowRight size={24} /> */}
-          </ButtonHandle>
+          </ActionButton>
         </Control>
       </CarouselWrapper>
     </Container>

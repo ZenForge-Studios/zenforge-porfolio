@@ -1,8 +1,8 @@
 //#region ------------------------ [ Biblioteca ] ------------------------;
 import React from "react";
 import {styled} from "styled-components";
-import {Button} from "../Button";
-import { ButtonHandle } from "../ButtonHandle";
+import {LinkButton} from "../Button/LinkButton";
+import { ActionButton } from "../Button/ActionButton";
 import { Modal } from "../Modal";
 import { AccessForm } from "../Form/AccessForm";
 /*import {Icon}  from "astro-icon/components";*/ //! ⚠️ Importación Fallida ⚠️
@@ -161,21 +161,21 @@ export const Navbar = ({
       {/*------ Botones ------*/}
       <NavButtons>
         {buttonData.map(({ href, /*icon,*/ label, standOut }, index) => (
-          <Button
+          <LinkButton
             key={index}
             href={href}
             standOut={standOut}
           >
           {/* {icon} //! ⚠️ Importación Fallida ⚠️ */}
           {label}
-          </Button>
+          </LinkButton>
         ))}
-        <ButtonHandle
+        <ActionButton
           standOut = {false}
           onClick={() => setModalOpen(true)}
         >
           Acceder
-        </ButtonHandle>
+        </ActionButton>
         {modalOpen && (
           <Modal> 
             <AccessForm />

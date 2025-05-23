@@ -1,6 +1,6 @@
 ---
 import Layout from "../layouts/Layout.astro"
-import { Button } from "../components/Button";
+import { LinkButton } from "../components/Button/LinkButton";
 ---
 <Layout title="Cotizar">
   <!-- Sección de Cotizar -->
@@ -12,13 +12,13 @@ import { Button } from "../components/Button";
     
     <!-- Botón de cotización adaptativo -->
     <div class="flex justify-center">
-      <Button
+      <LinkButton
         href="https://discord.gg/your-discord-invite"
         standOut={true}
         client:only="react"
       >
         🚀 Solicitar Cotización en Discord
-      </Button>
+      </LinkButton>
     </div>
   </section>
 </Layout>
