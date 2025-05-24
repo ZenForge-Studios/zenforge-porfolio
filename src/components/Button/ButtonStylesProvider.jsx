@@ -44,7 +44,7 @@ export const ButtonStylesProvider = styled.div`//* ------ [ Styled - Contenedor 
   button, a{
     display: flex;
     justify-content: center;
-    align-items: stretch;
+    align-items: center;
     min-height: 100%;
     min-width: 100%;
     gap: 0.5rem; 

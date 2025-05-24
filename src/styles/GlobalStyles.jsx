@@ -62,8 +62,10 @@ export const GlobalStyles = createGlobalStyle`
     -webkit-text-fill-color: transparent;
     cursor: pointer;
     &:focus, &:hover {
-      background: linear-gradient(90deg, #3B82F6, #214b98);
+      background: linear-gradient(90deg, #68b8ee,  #3B82F6);
       background-clip: text;
+      text-shadow: 0px 6px 18px 2px rgba(59, 130, 246, 0.18), 0px 6px 18px rgba(0, 0, 0, 0.15);
+      filter: drop-shadow(0 0 6px #3B82F6) brightness(1.05);
     }
   }
 
@@ -85,8 +87,10 @@ export const GlobalStyles = createGlobalStyle`
       color: inherit;
       transition: color 0.3s ease-in-out;
       &:focus, &:hover {
-        background: linear-gradient(90deg, #3B82F6, #214b98);
+        background: linear-gradient(90deg, #68b8ee,  #3B82F6);
         background-clip: text;
+        text-shadow: 0px 6px 18px 2px rgba(59, 130, 246, 0.18), 0px 6px 18px rgba(0, 0, 0, 0.15);
+        filter: drop-shadow(0 0 6px #3B82F6) brightness(1.05);
       }
     }
   }

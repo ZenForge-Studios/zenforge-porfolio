@@ -39,9 +39,7 @@ const Container = styled.article`
   &:hover {
     transform: scale(1.03);
   }
-
 `
-
 //#endregion
 //#region ------------------------ [ Componentes ] ------------------------;
 export const Card = ({
